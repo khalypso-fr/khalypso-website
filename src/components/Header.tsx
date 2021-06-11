@@ -12,9 +12,7 @@ import {
 import { useLocation } from '@reach/router'
 import { graphql, navigate, useStaticQuery } from 'gatsby'
 import { Cloud } from '@material-ui/icons'
-import routes from '../routes'
-
-const { home, subscription } = routes
+import { ROUTE } from '../routes'
 
 const WebsiteName: FC = () => {
   const {
@@ -36,7 +34,7 @@ const WebsiteName: FC = () => {
     <Typography
       variant="h4"
       component={Link}
-      href={home.route.fullPath}
+      href={ROUTE.HOME}
       color="textPrimary"
       underline="none"
     >
@@ -64,18 +62,18 @@ const Header: FC = () => {
     <AppBar position="static" color="default" elevation={10}>
       <Toolbar>
         <div className={classes.websiteName}>
-          <Cloud /> <WebsiteName />
+          <WebsiteName />
         </div>
         <Tabs value={rootPath}>
           <Tab
-            value={home.route.fullPath}
-            label={home.route.pageName}
-            onClick={() => navigate(home.route.fullPath)}
+            value={ROUTE.HOME}
+            label="Accueil"
+            onClick={() => navigate(ROUTE.HOME)}
           />
           <Tab
-            value={subscription.route.fullPath}
-            label={subscription.route.pageName}
-            onClick={() => navigate(subscription.route.fullPath)}
+            value={ROUTE.SUBSCRIPTIONS}
+            label="Abonnements"
+            onClick={() => navigate(ROUTE.SUBSCRIPTIONS)}
           />
         </Tabs>
       </Toolbar>

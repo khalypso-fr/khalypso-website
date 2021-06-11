@@ -9,17 +9,12 @@ import {
   makeStyles,
   Typography,
 } from '@material-ui/core'
+import { navigate } from 'gatsby'
 import React from 'react'
 
 import Layout from '../../components/Layout'
 import Seo from '../../components/seo'
-import routes from '../../routes'
-
-const {
-  subscription: {
-    subRoutes: { basic: basicSubscription },
-  },
-} = routes
+import { SUBSCRIPTIONS_ROUTE } from '../../routes'
 
 const tiers = [
   {
@@ -29,7 +24,6 @@ const tiers = [
       'Nom de domaine inclus',
       '5 pages incluses',
       '6 jours de développement par an inclus',
-      '1 adresse e-mail attaché au nom de domaine',
       'Maintenance et MAJ au quotidien',
     ],
     buttonText: 'En savoir plus',
@@ -52,11 +46,13 @@ const useStyles = makeStyles((theme) => ({
   },
 }))
 
+const PageTitle = 'Abonnements'
+
 const Subscriptions = () => {
   const classes = useStyles()
   return (
     <Layout>
-      <Seo title={routes.subscription.route.pageName} />
+      <Seo title={PageTitle} />
       <Typography
         component="h1"
         variant="h2"
@@ -110,9 +106,9 @@ const Subscriptions = () => {
               <CardActions>
                 <Button
                   fullWidth
-                  href={basicSubscription.fullPath}
                   variant="contained"
                   color="primary"
+                  onClick={() => navigate(SUBSCRIPTIONS_ROUTE.BASIC)}
                 >
                   {tier.buttonText}
                 </Button>

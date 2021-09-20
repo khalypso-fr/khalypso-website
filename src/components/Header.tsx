@@ -1,18 +1,16 @@
 import React, { FC } from 'react'
-
 import {
   AppBar,
-  Link,
-  makeStyles,
+  Container,
   Tab,
   Tabs,
   Toolbar,
   Typography,
-} from '@material-ui/core'
+  useTheme,
+} from '@mui/material'
+import { graphql, useStaticQuery, Link, navigate } from 'gatsby'
 import { useLocation } from '@reach/router'
-import { graphql, navigate, useStaticQuery } from 'gatsby'
-import { Cloud } from '@material-ui/icons'
-import { ROUTE } from '../routes'
+import { Box } from '@mui/system'
 
 const WebsiteName: FC = () => {
   const {
@@ -30,53 +28,66 @@ const WebsiteName: FC = () => {
       }
     }
   `)
+  const { palette } = useTheme()
   return (
     <Typography
       variant="h4"
-      component={Link}
-      href={ROUTE.HOME}
-      color="textPrimary"
-      underline="none"
+      sx={{ cursor: 'pointer' }}
+      onClick={(event) => {
+        event.preventDefault()
+        navigate('/')
+      }}
     >
-      {title}
+      <div
+        style={{
+          width: '40px',
+          lineHeight: '40px',
+          display: 'inline-block',
+          textAlign: 'center',
+          borderRadius: '50%',
+          border: '2px solid',
+          borderColor: palette.secondary.main,
+        }}
+      >
+        K
+      </div>
+      {title.substr(1)}
     </Typography>
   )
 }
 
-const useStyles = makeStyles(() => ({
-  websiteName: {
-    flexGrow: 1,
-  },
-}))
+type TabValue = 'development'
 
-const useRootPath = () => {
+const useTabSelectedValue = (): TabValue | false => {
   const { pathname } = useLocation()
-  const [root] = pathname.slice(1).split('/')
-  return `/${root}`
+  if (!pathname.startsWith('/')) {
+    return false
+  }
+  const [, firstPath] = pathname.split('/')
+  return firstPath === 'development' ? 'development' : false
+}
+
+const LinkTab: FC<{ label: string; to: string; value: string }> = ({
+  children,
+  ...props
+}) => {
+  return <Tab component={Link} {...props} />
 }
 
 const Header: FC = () => {
-  const classes = useStyles()
-  const rootPath = useRootPath()
+  const selectedTab = useTabSelectedValue()
   return (
-    <AppBar position="static" color="default" elevation={10}>
-      <Toolbar>
-        <div className={classes.websiteName}>
-          <WebsiteName />
-        </div>
-        <Tabs value={rootPath}>
-          <Tab
-            value={ROUTE.HOME}
-            label="Accueil"
-            onClick={() => navigate(ROUTE.HOME)}
-          />
-          <Tab
-            value={ROUTE.SUBSCRIPTIONS}
-            label="Abonnements"
-            onClick={() => navigate(ROUTE.SUBSCRIPTIONS)}
-          />
-        </Tabs>
-      </Toolbar>
+    <AppBar position="static">
+      <Container maxWidth="xl">
+        <Toolbar>
+          <Box sx={{ flexGrow: 1 }}>
+            <WebsiteName />
+          </Box>
+          <Tabs value={selectedTab} textColor="inherit">
+            <LinkTab value="development" to="/development" label="Création" />
+          </Tabs>
+        </Toolbar>
+      </Container>
     </AppBar>
   )
 }

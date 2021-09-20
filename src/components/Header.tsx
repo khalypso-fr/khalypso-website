@@ -29,6 +29,7 @@ const WebsiteName: FC = () => {
     }
   `)
   const { palette } = useTheme()
+  const [firstLetter, ...remaining] = title
   return (
     <Typography
       variant="h4"
@@ -38,20 +39,7 @@ const WebsiteName: FC = () => {
         navigate('/')
       }}
     >
-      <div
-        style={{
-          width: '40px',
-          lineHeight: '40px',
-          display: 'inline-block',
-          textAlign: 'center',
-          borderRadius: '50%',
-          border: '2px solid',
-          borderColor: palette.secondary.main,
-        }}
-      >
-        K
-      </div>
-      {title.substr(1)}
+      {title}
     </Typography>
   )
 }

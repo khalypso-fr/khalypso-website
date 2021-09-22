@@ -3,18 +3,20 @@ import { BoxProps } from '@mui/system'
 import React, { FC } from 'react'
 import OfferCard from '../components/OfferCard'
 
-const tiers = [
-  {
-    title: 'Basique',
-    price: 70,
-    includes: [
-      'Nom de domaine inclus',
-      '5 pages incluses',
-      '6 jours de développement par an inclus',
-      'Maintenance et MAJ au quotidien',
-    ],
-  },
-]
+// const tiers = [
+//   {
+//     title: 'Basique',
+//     price: 70,
+//     includes: [
+//       'Nom de domaine inclus',
+//       '5 pages incluses',
+//       '6 jours de développement par an inclus',
+//       'Maintenance et MAJ au quotidien',
+//     ],
+//   },
+// ]
+
+const tiers = []
 
 const SubscriptionsTemplates: FC<BoxProps> = (props) => {
   return (

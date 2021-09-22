@@ -27,7 +27,7 @@ const PresentationTemplate: FC<GridProps> = (props) => {
           xs={8}
           minHeight={500}
           sx={{
-            backgroundImage: 'url("/undraw_Personal_website_re_c8dv.png")',
+            backgroundImage: 'url("/undraw_Responsive_re_e1nn.png")',
             backgroundSize: 'cover',
           }}
         />

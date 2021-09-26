@@ -1,14 +1,11 @@
-import { Stack } from '@mui/material'
-import React from 'react'
+import { Divider, Stack } from '@mui/material'
+import React, { FC } from 'react'
 import Layout from '../layout/MainLayout'
-import MeTemplate from '../templates/MeTemplate'
 
-const IndexPage = () => {
+const IndexPage: FC = () => {
   return (
     <Layout>
-      <Stack direction="column" spacing={10}>
-        <MeTemplate id="presentation" alignItems="center" />
-      </Stack>
+      <Stack direction="column" spacing={5} divider={<Divider />}></Stack>
     </Layout>
   )
 }

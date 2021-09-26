@@ -6,11 +6,10 @@ import {
   Tabs,
   Toolbar,
   Typography,
-  useTheme,
 } from '@mui/material'
 import { graphql, useStaticQuery, Link, navigate } from 'gatsby'
 import { useLocation } from '@reach/router'
-import { Box } from '@mui/system'
+import { Box, useTheme } from '@mui/system'
 
 const WebsiteName: FC = () => {
   const {
@@ -29,7 +28,6 @@ const WebsiteName: FC = () => {
     }
   `)
   const { palette } = useTheme()
-  const [firstLetter, ...remaining] = title
   return (
     <Typography
       variant="h4"
@@ -39,20 +37,36 @@ const WebsiteName: FC = () => {
         navigate('/')
       }}
     >
+      <svg height="30" width="40">
+        <circle
+          cx="15"
+          cy="17"
+          r="10"
+          stroke={palette.secondary.main}
+          stroke-width="3"
+          fill="transparent"
+        />
+      </svg>
       {title}
     </Typography>
   )
 }
 
-type TabValue = 'development'
+type TabValue = 'website' | 'software' | 'presentation' | 'contact'
 
 const useTabSelectedValue = (): TabValue | false => {
   const { pathname } = useLocation()
-  if (!pathname.startsWith('/')) {
-    return false
+  switch (pathname) {
+    case '/offres/site-web':
+      return 'website'
+    case '/offres/logiciel':
+      return 'software'
+    case '/presentation':
+      return 'presentation'
+    case '/contact':
+      return 'contact'
   }
-  const [, firstPath] = pathname.split('/')
-  return firstPath === 'development' ? 'development' : false
+  return false
 }
 
 const LinkTab: FC<{ label: string; to: string; value: string }> = ({
@@ -72,7 +86,18 @@ const Header: FC = () => {
             <WebsiteName />
           </Box>
           <Tabs value={selectedTab} textColor="inherit">
-            <LinkTab value="development" to="/development" label="Création" />
+            <LinkTab value="website" to="/offres/site-web" label="Votre site" />
+            <LinkTab
+              value="software"
+              to="/offres/logiciel"
+              label="Votre logiciel"
+            />
+            <LinkTab
+              value="presentation"
+              to="/presentation"
+              label="Qui suis-je"
+            />
+            <LinkTab value="contact" to="/contact" label="Contact" />
           </Tabs>
         </Toolbar>
       </Container>

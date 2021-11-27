@@ -1,5 +1,5 @@
 import React, { FC } from 'react'
-import { Divider, Stack, Typography, Button } from '@mui/material'
+import { Divider, Stack, Typography } from '@mui/material'
 import Layout from '../../layout/MainLayout'
 import Presentation from '../../templates/Presentation'
 import Subscriptions from '../../templates/Subscriptions'
@@ -8,18 +8,17 @@ const { Item: PresentationItem } = Presentation
 
 const QuickIntroduction: FC = () => {
   return (
-    <Stack
-      direction="column"
-      alignItems="center"
-      textAlign="center"
-      spacing={2}
-    >
+    <Stack direction="column" textAlign="center" spacing={2}>
       <Typography variant="h2">
         Déployez votre site internet simplement
       </Typography>
-      <Button variant="contained" color="secondary">
-        En savoir plus
-      </Button>
+      <Typography variant="body1" color="GrayText" textAlign="justify">
+        Vos clients sont en ligne et doivent pouvoir accéder à votre entreprise.
+        Celui-ci vous permet d'étaler votre savoir-faire ou vos produits dans
+        une charte graphique qui vous correspond et vous identifie. Un site
+        internet dans l'air du temps et sécurisé inspire confiance et vous
+        permet de maitriser votre communication en ligne.
+      </Typography>
     </Stack>
   )
 }

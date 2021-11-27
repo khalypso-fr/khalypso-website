@@ -8,8 +8,8 @@ const tiers = [
     price: 70,
     includes: [
       'Nom de domaine inclus',
-      '5 pages incluses',
-      '6 jours de développement par an inclus',
+      'Référencement SEO',
+      'CMS inclus',
       'Maintenance et MAJ au quotidien',
     ],
   },

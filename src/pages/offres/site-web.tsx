@@ -2,7 +2,6 @@ import React, { FC } from 'react'
 import { Divider, Stack, Typography } from '@mui/material'
 import Layout from '../../layout/MainLayout'
 import Presentation from '../../templates/Presentation'
-import Subscriptions from '../../templates/Subscriptions'
 
 const { Item: PresentationItem } = Presentation
 
@@ -56,7 +55,6 @@ const WebPage = () => {
             <PresentationItem {...article} />
           ))}
         </Presentation>
-        <Subscriptions />
       </Stack>
     </Layout>
   )

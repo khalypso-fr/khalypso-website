@@ -54,14 +54,17 @@ typings/
 # dotenv environment variables file
 .env
 
-# gatsby files
-.cache/
-public
-
 # Mac files
 .DS_Store
 
 # Yarn
+.yarn/*
+!.yarn/cache
+!.yarn/patches
+!.yarn/plugins
+!.yarn/releases
+!.yarn/sdks
+!.yarn/versions
 yarn-error.log
 .pnp/
 .pnp.js
@@ -70,3 +73,6 @@ yarn-error.log
 
 # Intellij
 .idea
+
+#Next
+.next

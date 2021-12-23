@@ -1,6 +1,6 @@
 import { Container, Link, Paper, Stack, Typography } from '@mui/material'
 import React, { FC } from 'react'
-import GatsbyLink from 'gatsby-link'
+import NextLink from 'next/link'
 
 const Avatar: FC = () => (
   <Paper
@@ -110,7 +110,7 @@ const Me: FC = () => (
         <br />
         L'informatique devrait s'intégrer et simplifier la vie d'une entreprise
         et c'est sur ces points que je vous propose{' '}
-        <GatsbyLink to="/">mes services</GatsbyLink>.
+        <NextLink href="/">mes services</NextLink>.
       </Typography>
     </Stack>
   </Container>

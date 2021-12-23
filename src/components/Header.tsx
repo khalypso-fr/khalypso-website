@@ -7,34 +7,20 @@ import {
   Toolbar,
   Typography,
 } from '@mui/material'
-import { graphql, useStaticQuery, Link, navigate } from 'gatsby'
-import { useLocation } from '@reach/router'
+import { useRouter } from 'next/router'
 import { Box, useTheme } from '@mui/system'
+import Link from 'next/link'
 
 const WebsiteName: FC = () => {
-  const {
-    site: {
-      siteMetadata: { title },
-    },
-  } = useStaticQuery<{
-    site: { siteMetadata: { title: string } }
-  }>(graphql`
-    query HeaderQuery {
-      site {
-        siteMetadata {
-          title
-        }
-      }
-    }
-  `)
   const { palette } = useTheme()
+  const { push } = useRouter()
   return (
     <Typography
       variant="h4"
       sx={{ cursor: 'pointer' }}
-      onClick={(event) => {
+      onClick={(event: Event) => {
         event.preventDefault()
-        navigate('/')
+        push('/')
       }}
     >
       <svg height="30" width="40">
@@ -43,11 +29,11 @@ const WebsiteName: FC = () => {
           cy="17"
           r="10"
           stroke={palette.secondary.main}
-          stroke-width="3"
+          strokeWidth="3"
           fill="transparent"
         />
       </svg>
-      {title}
+      Khalypso
     </Typography>
   )
 }
@@ -55,7 +41,7 @@ const WebsiteName: FC = () => {
 type TabValue = 'website' | 'software' | 'presentation' | 'contact'
 
 const useTabSelectedValue = (): TabValue | false => {
-  const { pathname } = useLocation()
+  const { pathname } = useRouter()
   switch (pathname) {
     case '/offres/site-web':
       return 'website'
@@ -69,11 +55,15 @@ const useTabSelectedValue = (): TabValue | false => {
   return false
 }
 
-const LinkTab: FC<{ label: string; to: string; value: string }> = ({
+const LinkTab: FC<{ label: string; href: string; value: string }> = ({
   children,
   ...props
 }) => {
-  return <Tab component={Link} {...props} />
+  return (
+    <Link href={props.href}>
+      <Tab {...props} />
+    </Link>
+  )
 }
 
 const Header: FC = () => {
@@ -86,18 +76,22 @@ const Header: FC = () => {
             <WebsiteName />
           </Box>
           <Tabs value={selectedTab} textColor="inherit">
-            <LinkTab value="website" to="/offres/site-web" label="Votre site" />
+            <LinkTab
+              value="website"
+              href="/offres/site-web"
+              label="Votre site"
+            />
             <LinkTab
               value="software"
-              to="/offres/logiciel"
+              href="/offres/logiciel"
               label="Votre logiciel"
             />
             <LinkTab
               value="presentation"
-              to="/presentation"
+              href="/presentation"
               label="Qui suis-je"
             />
-            <LinkTab value="contact" to="/contact" label="Contact" />
+            <LinkTab value="contact" href="/contact" label="Contact" />
           </Tabs>
         </Toolbar>
       </Container>

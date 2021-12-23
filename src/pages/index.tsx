@@ -1,6 +1,6 @@
 import { Button, Grid, Stack, Typography } from '@mui/material'
+import Link from 'next/link'
 import React, { FC } from 'react'
-import { Link } from 'gatsby'
 import Layout from '../layout/MainLayout'
 
 const IndexPage: FC = () => {
@@ -10,14 +10,14 @@ const IndexPage: FC = () => {
         <Typography variant="h3">Je veux...</Typography>
         <Grid container>
           <Grid item xs={12} md={6} textAlign="center">
-            <Link to="/offres/site-web" style={{ textDecoration: 'none' }}>
+            <Link href="/offres/site-web">
               <Button variant="contained" color="secondary">
                 Un site web
               </Button>
             </Link>
           </Grid>
           <Grid item xs={12} md={6} textAlign="center">
-            <Link to="/offres/logiciel" style={{ textDecoration: 'none' }}>
+            <Link href="/offres/logiciel">
               <Button variant="contained" color="secondary">
                 Un logiciel sur-mesure
               </Button>

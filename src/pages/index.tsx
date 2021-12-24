@@ -2,7 +2,7 @@ import { Box, Container, Typography, useTheme } from '@mui/material'
 import { BoxProps } from '@mui/system'
 import React, { FC } from 'react'
 import { CircleIcon } from '../components/CircleIcon'
-import WrapperMaterial from '../layout/WrapperMaterial'
+import PageWrapper from '../PageWrapper'
 
 const SiteTitle: FC = () => {
   const { palette } = useTheme()
@@ -40,11 +40,11 @@ const LandingPresentation: FC<BoxProps> = ({ sx, ...props }) => (
 
 const IndexPage: FC = () => {
   return (
-    <WrapperMaterial>
+    <PageWrapper>
       <Container maxWidth="xl">
         <LandingPresentation sx={{ marginTop: '50px' }} />
       </Container>
-    </WrapperMaterial>
+    </PageWrapper>
   )
 }
 

@@ -1,6 +1,6 @@
 import React, { FC } from 'react'
 import { Divider, Stack, Typography } from '@mui/material'
-import Layout from '../../layout/MainLayout'
+import MainLayout from '../../layout/MainLayout'
 import Presentation from '../../templates/Presentation'
 
 const { Item: PresentationItem } = Presentation
@@ -47,7 +47,7 @@ const articles: Array<{
 
 const WebPage = () => {
   return (
-    <Layout>
+    <MainLayout>
       <Stack direction="column" spacing={5} divider={<Divider />}>
         <QuickIntroduction />
         <Presentation>
@@ -56,7 +56,7 @@ const WebPage = () => {
           ))}
         </Presentation>
       </Stack>
-    </Layout>
+    </MainLayout>
   )
 }
 

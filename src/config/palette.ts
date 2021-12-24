@@ -18,5 +18,6 @@ const secondary: PaletteColorOptions = {
 
 export const paletteOptions: PaletteOptions = {
     primary,
-    secondary
+    secondary,
+    background: {default: primary.dark}
 }

@@ -18,7 +18,7 @@ const WebsiteName: FC = () => {
     <Typography
       variant="h4"
       sx={{ cursor: 'pointer' }}
-      onClick={(event: Event) => {
+      onClick={(event) => {
         event.preventDefault()
         push('/')
       }}

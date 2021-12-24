@@ -1,7 +1,7 @@
 import { Grid, Divider, TextField, Typography, Stack } from '@mui/material'
 import { Email as EmailIcon } from '@mui/icons-material'
 import React, { FC } from 'react'
-import Layout from '../layout/MainLayout'
+import MainLayout from '../layout/MainLayout'
 
 const ContactEntry: FC<{ label: string; icon: React.ReactNode }> = ({
   label,
@@ -44,9 +44,9 @@ const ContactForm: FC = () => {
 
 const IndexPage: FC = () => {
   return (
-    <Layout>
+    <MainLayout>
       <ContactForm />
-    </Layout>
+    </MainLayout>
   )
 }
 

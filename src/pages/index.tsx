@@ -7,7 +7,7 @@ import PageWrapper from '../PageWrapper'
 const SiteTitle: FC = () => (
   <Typography
     sx={{ color: ({ palette }) => palette.primary.contrastText }}
-    fontSize={'10em'}
+    variant="h1"
   >
     Khalypso
   </Typography>
@@ -16,7 +16,7 @@ const SiteTitle: FC = () => (
 const Quote: FC = () => (
   <Typography
     sx={{ color: ({ palette }) => palette.primary.contrastText }}
-    fontSize={'2em'}
+    variant="h4"
   >
     Concevoir. Déployer. Maintenir.
   </Typography>
@@ -27,6 +27,7 @@ const LandingPresentation: FC<BoxProps> = ({ sx, ...props }) => (
     {...props}
     sx={{
       display: 'grid',
+      rowGap: '20px',
       alignContent: 'center',
       justifyItems: 'center',
       ...sx,

@@ -1,7 +1,7 @@
-import { Box, Container, Divider, Typography, useTheme } from '@mui/material'
+import { Box, Container, Typography, useTheme } from '@mui/material'
 import { BoxProps } from '@mui/system'
 import React, { FC } from 'react'
-import { CircleIcon } from '../components/CircleIcon'
+import { GoldCircle } from '../components/GoldCircle'
 import PageWrapper from '../PageWrapper'
 
 const SiteTitle: FC = () => (
@@ -30,11 +30,12 @@ const LandingPresentation: FC<BoxProps> = ({ sx, ...props }) => (
       rowGap: '20px',
       alignContent: 'center',
       justifyItems: 'center',
+      textAlign: 'center',
       ...sx,
     }}
   >
     <SiteTitle />
-    <CircleIcon />
+    <GoldCircle />
     <Quote />
   </Box>
 )

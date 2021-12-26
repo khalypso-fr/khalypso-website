@@ -1,5 +1,4 @@
-import { Box, Typography } from '@mui/material'
-import { BoxProps } from '@mui/system'
+import { Stack, StackProps, Typography } from '@mui/material'
 import React, { FC } from 'react'
 import { GoldCircle } from '../components/GoldCircle'
 
@@ -21,22 +20,12 @@ export const Quote: FC = () => (
   </Typography>
 )
 
-const LandingPresentation: FC<BoxProps> = ({ sx, ...props }) => (
-  <Box
-    {...props}
-    sx={{
-      display: 'grid',
-      rowGap: '20px',
-      alignContent: 'center',
-      justifyItems: 'center',
-      textAlign: 'center',
-      ...sx,
-    }}
-  >
+const LandingPresentation: FC<StackProps> = (props) => (
+  <Stack direction="column" spacing={2} alignItems="center" {...props}>
     <SiteTitle />
     <GoldCircle />
     <Quote />
-  </Box>
+  </Stack>
 )
 
 export default LandingPresentation

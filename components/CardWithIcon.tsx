@@ -1,18 +1,13 @@
 import { FC } from 'react'
-import { Box, Typography, Paper } from '@mui/material'
 
 export const CardWithIcon: FC<{
   title: string
   description: string
 }> = ({ title, description }) => {
   return (
-    <div>
-      <Typography gutterBottom variant="h5" component="div">
-        {title}
-      </Typography>
-      <Typography variant="body1" color="text.secondary" textAlign="justify">
-        {description}
-      </Typography>
+    <div className="flex flex-col gap-2">
+      <h5 className="text-2xl text-center">{title}</h5>
+      <p className="text-lg text-center text-gray-300">{description}</p>
     </div>
   )
 }

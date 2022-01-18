@@ -1,31 +1,22 @@
-import { Stack, StackProps, Typography } from '@mui/material'
 import React, { FC } from 'react'
 import { GoldCircle } from './GoldCircle'
 
 export const SiteTitle: FC = () => (
-  <Typography
-    sx={{ color: ({ palette }) => palette.primary.contrastText }}
-    variant="h1"
-  >
-    Khalypso
-  </Typography>
+  <h1 className="text-primary-contrastText text-8xl">Khalypso</h1>
 )
 
 export const Quote: FC = () => (
-  <Typography
-    sx={{ color: ({ palette }) => palette.primary.contrastText }}
-    variant="h4"
-  >
+  <h4 className="text-primary-contrastText text-3xl">
     Concevoir. Déployer. Maintenir.
-  </Typography>
+  </h4>
 )
 
-const LandingPresentation: FC<StackProps> = (props) => (
-  <Stack direction="column" spacing={2} alignItems="center" {...props}>
+const LandingPresentation: FC = () => (
+  <div className="flex flex-col gap-4 items-center">
     <SiteTitle />
     <GoldCircle />
     <Quote />
-  </Stack>
+  </div>
 )
 
 export default LandingPresentation

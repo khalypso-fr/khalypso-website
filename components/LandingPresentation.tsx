@@ -1,6 +1,6 @@
 import { Stack, StackProps, Typography } from '@mui/material'
 import React, { FC } from 'react'
-import { GoldCircle } from '../components/GoldCircle'
+import { GoldCircle } from './GoldCircle'
 
 export const SiteTitle: FC = () => (
   <Typography

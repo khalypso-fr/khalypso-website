@@ -6,7 +6,9 @@ export const CardWithIcon: FC<{
 }> = ({ title, description }) => {
   return (
     <div className="flex flex-col gap-2">
-      <h5 className="text-2xl text-center">{title}</h5>
+      <h5 className="text-2xl text-center text-primary-contrastText">
+        {title}
+      </h5>
       <p className="text-lg text-center text-gray-300">{description}</p>
     </div>
   )

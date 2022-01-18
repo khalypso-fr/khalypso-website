@@ -1,16 +1,15 @@
-import { Container, Stack, Divider } from '@mui/material'
 import React, { FC } from 'react'
 import LandingPresentation from '../components/LandingPresentation'
 import LandingArguments from '../components/LandingArguments'
+import { NextPage } from 'next'
 
-const IndexPage: FC = () => {
+const IndexPage: FC<NextPage> = () => {
   return (
-    <Container maxWidth="xl">
-      <Stack spacing={5} divider={<Divider />} sx={{ marginTop: '50px' }}>
-        <LandingPresentation />
-        <LandingArguments sx={{ width: '100%' }} />
-      </Stack>
-    </Container>
+    <div className="flex flex-col gap-6">
+      <LandingPresentation />
+      <div className="flex-grow border-t border-gray-500"></div>
+      <LandingArguments />
+    </div>
   )
 }
 

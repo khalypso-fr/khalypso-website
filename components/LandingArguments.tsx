@@ -1,5 +1,3 @@
-import { Grid } from '@mui/material'
-import { GridProps, SxProps } from '@mui/system'
 import { FC } from 'react'
 import { CardWithIcon } from './CardWithIcon'
 
@@ -22,14 +20,12 @@ const articles: Array<{
   },
 ]
 
-const LandingArguments: FC<GridProps & { sx: SxProps }> = (props) => (
-  <Grid container spacing={5} {...props}>
+const LandingArguments: FC = () => (
+  <div className="grid xs:grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
     {articles.map(({ title, description }, index) => (
-      <Grid item key={index} xs={12} sm={6} md={4}>
-        <CardWithIcon title={title} description={description} />
-      </Grid>
+      <CardWithIcon key={index} title={title} description={description} />
     ))}
-  </Grid>
+  </div>
 )
 
 export default LandingArguments

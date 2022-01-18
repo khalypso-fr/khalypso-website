@@ -1,4 +1,3 @@
-import { useTheme } from '@mui/material'
 import { FC, useMemo } from 'react'
 
 const PADDING_BOX_CIRCLE = 10
@@ -23,7 +22,6 @@ export const GoldCircle: FC<{ radiusInPixels?: number; animate?: boolean }> = ({
   animate = SHOULD_ANIMATE_BY_DEFAULT,
   radiusInPixels = CIRCLE_SIZE_DEFAULT,
 }) => {
-  const { palette } = useTheme()
   const { size, placement, strokeWidth } = useCircleDimensions(radiusInPixels)
   return (
     <svg width={size} height={size}>
@@ -31,7 +29,7 @@ export const GoldCircle: FC<{ radiusInPixels?: number; animate?: boolean }> = ({
         cx={placement}
         cy={placement}
         r={radiusInPixels}
-        stroke={palette.secondary.main}
+        className="stroke-secondary-main"
         strokeWidth={strokeWidth}
         fill="transparent"
       >

@@ -735,6 +735,7 @@ __metadata:
   dependencies:
     "@astrojs/tailwind": "npm:^5.0.2"
     astro: "npm:^3.4.3"
+    astro-seo: "npm:^0.8.0"
     tailwindcss: "npm:^3.3.5"
   languageName: unknown
   linkType: soft
@@ -1059,6 +1060,13 @@ __metadata:
   version: 2.0.1
   resolution: "array-iterate@npm:2.0.1"
   checksum: 756c08334f95e290f03ab2141b034514af1311ef7b62f15b0f5ea6f8f3033ee9cc6a8f1c3e9ff4803d4d723cf992aa61460acf5fce884936972db966b1da287d
+  languageName: node
+  linkType: hard
+
+"astro-seo@npm:^0.8.0":
+  version: 0.8.0
+  resolution: "astro-seo@npm:0.8.0"
+  checksum: db6660a32983f3a023eb8de9ea79adf429cb873bb93fa04d5fe06c71aa63f1970eadbd8231d0ffa6d26ff80c77571bcd0afe0635b4dd6bc93ddddc36a1f948bd
   languageName: node
   linkType: hard
 

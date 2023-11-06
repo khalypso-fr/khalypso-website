@@ -1,6 +1,7 @@
 ---
 import Header from "../components/Header.astro";
 import Hero from "../components/Hero.astro";
+import Projects from "../components/Projects.astro";
 import GradientBackground from "../layouts/GradientBackground.astro";
 import Layout from "../layouts/Layout.astro";
 ---
@@ -10,6 +11,9 @@ import Layout from "../layouts/Layout.astro";
     <Header />
   </section>
   <GradientBackground>
-	<Hero />
+    <Hero />
+    <div class="container mx-auto">
+      <Projects />
+    </div>
   </GradientBackground>
 </Layout>

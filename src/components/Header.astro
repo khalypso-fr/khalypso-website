@@ -1,0 +1,18 @@
+---
+import { Icon } from "astro-icon";
+---
+
+<header
+  class="flex justify-between p-4 mt-5 rounded-xl bg-secondary text-primary shadow-xl items-center"
+>
+  <h1 class="font-montserrat text-2xl font-semibold">
+    <a href="/" aria-label="Aller vers l'accueil">Khalypso</a>
+  </h1>
+  <a
+    href="mailto:mathieu@khalypso.fr"
+    title="Envoyer un mail à mathieu@khalypso.fr"
+    aria-label="Envoyer un mail à mathieu@khalypso.fr"
+    class="rounded-full hover:bg-primary hover:text-secondary p-1 transition ease-in"
+    ><Icon name="mdi:at" size={30} /></a
+  >
+</header>

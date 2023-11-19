@@ -742,7 +742,7 @@ __metadata:
   dependencies:
     "@astrojs/tailwind": "npm:^5.0.2"
     "@fontsource/montserrat": "npm:^5.0.15"
-    astro: "npm:^3.5.4"
+    astro: "npm:3.5.5"
     astro-icon: "npm:^0.8.1"
     astro-seo: "npm:^0.8.0"
     tailwindcss: "npm:^3.3.5"
@@ -1097,9 +1097,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"astro@npm:^3.5.4":
-  version: 3.5.4
-  resolution: "astro@npm:3.5.4"
+"astro@npm:3.5.5":
+  version: 3.5.5
+  resolution: "astro@npm:3.5.5"
   dependencies:
     "@astrojs/compiler": "npm:^2.3.0"
     "@astrojs/internal-helpers": "npm:0.2.1"
@@ -1165,7 +1165,7 @@ __metadata:
       optional: true
   bin:
     astro: astro.js
-  checksum: 6687a241b7dcea0ef739ff89e933833b18caa2103a2123bd1372d0aa7e4bd107671818eece76d0dd741e88987e0257ef84c10bb59981f78d8365d2a6ca078da0
+  checksum: b5005a98f82820998b52c39dff1b57d4f83c3126e938225823fc97253a20de4f49a14a2412192ab103494169262a00902f2fac87421b796b6f8f66db93f0ddb7
   languageName: node
   linkType: hard
 

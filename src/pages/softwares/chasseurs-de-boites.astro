@@ -1,0 +1,51 @@
+---
+import Header from "../../components/Header.astro";
+import GradientBackground from "../../layouts/GradientBackground.astro";
+import Layout from "../../layouts/Layout.astro";
+---
+
+<Layout title="Khalypso - Editeur logiciel et web">
+  <section class="container mx-auto">
+    <Header />
+  </section>
+  <GradientBackground from="#102F41" to="#F59E0B">
+    <section class="container mx-auto leading-relaxed text-justify">
+      <h1 class="text-3xl">Règles de confidentialité</h1>
+      <p class="font-light">
+        "Chasseurs de Boîtes" est éditée par Khalypso. Le terme Application
+        s'applique à l'application pour mobile ou tablette Android nommée
+        "Chasseurs de Boîtes".<br />
+        Nos règles de confidentialité expliquent quelles données nous collectons
+        depuis l’Application et les raisons de cette collecte, comment nous utilisons
+        / traitons ces informations et à quels tiers nous pourrions éventuellement
+        les divulguer.
+      </p>
+      <h2 class="text-2xl mt-2">Données personnelles</h2>
+      <p class="text-md">
+        Depuis notre application, nous pouvons être amené à collecter les
+        données de localisation si vous y consentez. Elles permettent de pouvoir
+        faciliter la découverte des boîtes aux lettres autour de vous. Aucune
+        donnée n'est conservée dans l'application ou sur des serveurs.
+      </p>
+      <h2 class="text-2xl mt-2">
+        Données personnelles non collectées automatiquement
+      </h2>
+      <p class="text-md">
+        Nous collectons uniquement des informations en cas de panne de votre
+        mobile lors de l’utilisation de l’Application. Ces informations sur le
+        crash, qui sont nécessaires au débogage de l’Application, sont envoyées
+        au site tiers FireBase. Les informations suivantes sont collectées:
+        <ul class="list-disc list-inside">
+          <li>Le type d’appareil utilisé</li>
+          <li>Quelle version d’Android est utilisée sur l’appareil</li>
+          <li>
+            Le crash-log décrivant dans quelle section du code le crash s’est
+            produit
+          </li>
+        </ul>
+        Nous ne collectons aucune information personnelle identifiable . Nous ne
+        vendons pas, n’échangeons ni transférons ces informations à des tiers.
+      </p>
+    </section>
+  </GradientBackground>
+</Layout>

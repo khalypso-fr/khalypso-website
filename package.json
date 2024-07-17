@@ -1,6 +1,6 @@
 {
   "name": "@khalypso/website",
-  "version": "1.0.0-beta.38",
+  "version": "1.0.0",
   "description": "Khalypso.fr website - Based on AstroWind",
   "type": "module",
   "private": true,

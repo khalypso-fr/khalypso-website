@@ -7,15 +7,14 @@ export const resources = {
   fr,
 } as const;
 
-export const defaultNS = 'translation';
+export const defaultNS = 'common';
 
 export const retrieveI18n = async () => {
   if(!i18n.isInitialized) {
     await i18n.init({
       defaultNS,
-      fallbackLng: 'en',
+      fallbackLng: 'fr',
       resources,
-      debug: true
     });
   }
   return i18n;

@@ -1,5 +1,11 @@
 {
-  "translation": {
-    "button.backToBlog.text": "Back to Blog"
+  "components": {
+    "backToBlog": {
+      "button.text": "Back to Blog"
+    },
+    "relatedPosts": {
+      "title": "Related Posts",
+      "linkText": "View All Posts"
+    }
   }
 }

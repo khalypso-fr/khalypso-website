@@ -1,34 +1,33 @@
 site:
-  name: AstroWind
-  site: 'https://astrowind.vercel.app'
+  name: Khalypso - Editeur logiciel
+  site: 'https://khalypso.fr'
   base: '/'
   trailingSlash: false
-
   googleSiteVerificationId: orcPxI47GSa-cRvY11tUe6iGg2IO_RPvnA1q95iEM3M
 
 # Default SEO metadata
 metadata:
   title:
-    default: AstroWind
-    template: '%s — AstroWind'
-  description: "\U0001F680 Suitable for Startups, Small Business, Sass Websites, Professional Portfolios, Marketing Websites, Landing Pages & Blogs."
+    default: Khalypso
+    template: '%s — Khalypso'
+  description: "Editeur de logiciels web et mobiles"
   robots:
     index: true
     follow: true
   openGraph:
-    site_name: AstroWind
+    site_name: Khalypso
     images:
       - url: '~/assets/images/default.png'
         width: 1200
         height: 628
     type: website
-  twitter:
-    handle: '@onwidget'
-    site: '@onwidget'
-    cardType: summary_large_image
+  # twitter:
+  #   handle: '@onwidget'
+  #   site: '@onwidget'
+  #   cardType: summary_large_image
 
 i18n:
-  language: en
+  language: fr
   textDirection: ltr
 
 apps:
@@ -66,7 +65,7 @@ apps:
 analytics:
   vendors:
     googleAnalytics:
-      id: null # or "G-XXXXXXXXXX"
+      id: "G-0F3422HG5J"
 
 ui:
   theme: 'system' # Values: "system" | "light" | "dark" | "light:only" | "dark:only"

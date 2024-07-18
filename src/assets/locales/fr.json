@@ -1,4 +1,13 @@
 {
+  "common": {
+    "error": "Erreur"
+  },
+  "404": {
+    "pageTitle": "404 - Page non trouvée",
+    "title": "Désolé, la page est introuvable.",
+    "description": "Mais pas de panique, on repart à l'accueil.",
+    "backToHomepage": "Retour à l'accueil"
+  },
   "components": {
     "backToBlog": {
       "button.text": "Retour au blog"

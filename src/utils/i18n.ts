@@ -1,4 +1,6 @@
 import i18n from "i18next";
+import { I18N } from 'astrowind:config';
+
 import en from "src/assets/locales/en.json";
 import fr from "src/assets/locales/fr.json";
 
@@ -13,7 +15,7 @@ export const retrieveI18n = async () => {
   if(!i18n.isInitialized) {
     await i18n.init({
       defaultNS,
-      fallbackLng: 'fr',
+      fallbackLng: I18N.language,
       resources,
     });
   }

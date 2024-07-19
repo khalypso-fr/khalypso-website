@@ -6,6 +6,14 @@ media_folder: 'src/assets/images'
 public_folder: '/_astro'
 
 collections:
+  - name: 'announcement'
+    label: 'Announcement'
+    folder: 'src/content/announcement'
+    create: true
+    fields:
+      - { label: 'Title', name: 'title', widget: string }
+      - { label: 'Tag', name: 'tag', widget: string }
+      - { label: 'Link', name: 'link', widget: string }
   - name: 'post'
     label: 'Post'
     folder: 'src/content/post'

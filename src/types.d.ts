@@ -49,6 +49,17 @@ export interface Taxonomy {
   title: string;
 }
 
+export interface Announcement {
+  /** Tag */
+  tag: string;
+
+  /** Title */
+  title: string;
+
+  /** Link */
+  link?: string;
+}
+
 export interface MetaData {
   title?: string;
   ignoreTitleTemplate?: boolean;

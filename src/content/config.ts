@@ -63,6 +63,15 @@ const postCollection = defineCollection({
   }),
 });
 
+const announcementCollection = defineCollection({
+  schema: z.object({
+    title: z.string(),
+    tag: z.string(),
+    link: z.string().optional(),
+  }),
+});
+
 export const collections = {
   post: postCollection,
+  announcement: announcementCollection,
 };

@@ -1,5 +1,5 @@
 site:
-  name: Khalypso - Editeur logiciel
+  name: Khalypso
   site: 'https://khalypso.fr'
   base: '/'
   trailingSlash: false

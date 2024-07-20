@@ -2,7 +2,9 @@ backend:
   name: github
   repo: khalypso-fr/website
   branch: main
+  squash_merges: true
 
+publish_mode: editorial_workflow
 media_folder: 'src/assets/images'
 public_folder: '/_astro'
 

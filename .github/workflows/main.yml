@@ -14,4 +14,4 @@ jobs:
           node-version: 20
       - run: yarn install && yarn add --dev @lhci/cli@0.14.x
       - run: yarn build
-      - run: lhci autorun
+      - run: yarn run lhci autorun

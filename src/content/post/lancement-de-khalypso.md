@@ -6,7 +6,7 @@ tags:
   - lancement
   - bienvenue
   - khalypso
-image: /_astro/1000044729.jpg
+image: ~/assets/images/1000044729.jpg
 publishDate: 2024-08-04T21:16:00.000Z
 author: Mathieu
 ---

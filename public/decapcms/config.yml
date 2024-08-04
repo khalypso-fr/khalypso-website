@@ -6,7 +6,7 @@ backend:
 
 publish_mode: editorial_workflow
 media_folder: 'src/assets/images'
-public_folder: '/_astro'
+public_folder: '~/assets/images'
 
 collections:
   - name: 'announcement'

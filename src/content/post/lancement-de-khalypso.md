@@ -40,6 +40,6 @@ Nous ne nous contentons pas de créer des produits numériques ; nous vous accom
 
 Vous avez un projet en tête ? Besoin de conseils pour lancer votre site web ou développer un logiciel ? N'hésitez pas à nous contacter !
 
-- **Email** : mathieu@khalypso.com
+- **Email** : mathieu@khalypso.fr
 
-Visitez notre site web pour en savoir plus sur nos services et découvrir nos réalisations : [www.khalypso.com](http://www.khalypso.com).
+Visitez notre site web pour en savoir plus sur nos services et découvrir nos réalisations : [www.khalypso.fr](http://www.khalypso.fr).

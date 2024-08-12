@@ -24,7 +24,7 @@ const metadata = {
     }}
   >
     <Fragment slot="title">
-      Transformez votre entreprise avec <span class="text-accent dark:text-white highlight">Khalypso</span>
+      Transformez votre entreprise avec <span class="text-accent highlight">Khalypso</span>
     </Fragment>
 
     <Fragment slot="subtitle">
@@ -49,8 +49,7 @@ const metadata = {
       },
       {
         title: 'Compatibilité optimale pour tous les navigateurs et écrans',
-        description:
-          'Votre site se doit d\'être disponible par tous et pour tous.',
+        description: "Votre site se doit d'être disponible par tous et pour tous.",
         icon: 'tabler:podium',
       },
       {
@@ -64,38 +63,60 @@ const metadata = {
   <!-- Content Widget **************** -->
 
   <Content
-    title="Nos applications"
+    title="Nos réalisations"
     subtitle="Découvrez les applications développées par nos soins"
     isReversed
     items={[
       {
-        title: 'Description:',
+        classes: {
+          icon: 'hidden',
+        },
         description:
           'Vous en avez assez de chercher désespérément une boîte aux lettres quand vous en avez le plus besoin ? Ne cherchez plus ! "Chasseur de Boîtes" est là pour vous simplifier la vie. Notre application intuitive et facile à utiliser vous aide à localiser les boîtes aux lettres les plus proches de vous ou dans une zone spécifique de votre choix.',
       },
+    ]}
+    callToAction={{
+      variant: 'primary',
+      text: 'Disponible sur Android',
+      icon: 'tabler:brand-google-play',
+      href: 'https://play.google.com/store/apps/details?id=fr.khalypso.maboiteauxlettres',
+    }}
+    image={{
+      src: '~/assets/images/chasseurs_de_boites.png',
+      alt: 'Logo de Chasseurs de Boites',
+      layout: 'cover',
+    }}
+  >
+    <Fragment slot="content">
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl">Chasseurs de Boîtes</h3>
+    </Fragment>
+  </Content>
+
+  <Content
+    items={[
       {
         classes: {
           icon: 'hidden',
         },
-        callToAction: {
-          href: 'https://play.google.com/store/apps/details?id=fr.khalypso.maboiteauxlettres&pcampaignid=pcampaignidMKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1',
-          text: "<img alt='Disponible sur Google Play' src='https://play.google.com/intl/en_us/badges/static/images/badges/fr_badge_web_generic.png'/>",
-        },
+        description:
+          'Bellezza di Em est votre destination de choix pour des ongles élégants et soignés. Nous offrons des services de prothésie ongulaire de haute qualité, adaptés à vos goûts et besoins. Faites confiance à notre expertise pour sublimer vos mains avec des créations uniques et raffinées.',
       },
     ]}
+    callToAction={{
+      target: '_blank',
+      variant: 'primary',
+      text: 'Voir le site',
+      icon: 'tabler:chevron-right',
+      href: 'https://www.bellezzadiem.fr',
+    }}
     image={{
-      src: 'https://images.unsplash.com/photo-1620558138198-cfb9b4f3c294?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1671&q=80',
-      alt: 'Startup Image',
+      src: '~/assets/images/bellezzadiem.png',
+      alt: 'Logo de Bellezza di Em',
+      layout: 'cover',
     }}
   >
     <Fragment slot="content">
-      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">
-        Chasseurs de Boîtes: <br /><span class="text-2xl">Disponible sur Android</span>
-      </h3>
-    </Fragment>
-
-    <Fragment slot="bg">
-      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl">Bellezza di Em</h3>
     </Fragment>
   </Content>
 

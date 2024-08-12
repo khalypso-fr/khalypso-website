@@ -118,7 +118,7 @@ Inside **AstroWind** template, you'll see the following folders and files:
 │   │   └── ...
 │   ├── utils/
 │   ├── config.yaml
-│   └── navigation.js
+│   └── navigation.ts
 ├── package.json
 ├── astro.config.mjs
 └── ...

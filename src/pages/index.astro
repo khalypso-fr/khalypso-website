@@ -3,13 +3,12 @@ import Layout from '~/layouts/PageLayout.astro';
 
 import Hero2 from '~/components/widgets/Hero2.astro';
 import Features from '~/components/widgets/Features.astro';
-import Steps2 from '~/components/widgets/Steps2.astro';
 import Content from '~/components/widgets/Content.astro';
 
 import BlogLatestPosts from '~/components/widgets/BlogLatestPosts.astro';
 
 const metadata = {
-  title: 'Khalypso - Editeur logiciel',
+  title: 'Accueil',
 };
 ---
 
@@ -119,21 +118,6 @@ const metadata = {
       <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl">Bellezza di Em</h3>
     </Fragment>
   </Content>
-
-  <!-- Steps2 Widget ****************** -->
-
-  <Steps2
-    id='contact'
-    title="Contactez-nous"
-    subtitle="Vous avez une question ? N'hésitez pas ! Nous sommes ici pour aider."
-    items={[
-      {
-        title: 'Par e-mail',
-        description: '<a href="mailto:mathieu@khalypso.fr">mathieu@khalypso.fr</a>',
-        icon: 'tabler:mail',
-      },
-    ]}
-  />
 
   <!-- BlogLatestPost Widget **************** -->
 

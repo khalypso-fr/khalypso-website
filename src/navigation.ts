@@ -8,7 +8,7 @@ export const headerData = {
       text: 'Blog',
       href: getBlogPermalink(),
     },
-    { text: 'Contact', href: '/#contact' },
+    { text: 'Contact', href: getPermalink('/contact') },
   ],
 } satisfies HeaderProps;
 

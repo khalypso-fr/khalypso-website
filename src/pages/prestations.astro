@@ -1,0 +1,66 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+
+import Hero2 from '~/components/widgets/Hero2.astro';
+import Features from '~/components/widgets/Features.astro';
+import Content from '~/components/widgets/Content.astro';
+
+import BlogLatestPosts from '~/components/widgets/BlogLatestPosts.astro';
+import Pricing from '~/components/widgets/Pricing.astro';
+
+const metadata = {
+  title: 'Prestations',
+};
+---
+
+<Layout metadata={metadata}>
+  <!-- Hero2 Widget ******************* -->
+
+  <Pricing
+    prices={[
+      {
+        title: 'Basique',
+        subtitle: 'Idéal pour démarrer votre présence en ligne',
+        price: '9.99',
+        period: 'par mois',
+        items: [
+          {
+            description: 'Nom de domaine et 1 email associé',
+          },
+          {
+            description: 'Site vitrine (5 pages maximum)',
+          },
+          {
+            description: 'Maintenance et mise à jour de sécurité journalière',
+          },
+          {
+            description: 'Optimisation SEO et responsive',
+          },
+          {
+            description: 'Liens vers vos différents réseaux',
+          },
+          {
+            description: 'Mise en place de Google Analytics',
+          },
+        ],
+      },
+      {
+        title: 'Pro',
+        subtitle: 'Idéal pour démarrer votre présence en ligne',
+        price: '12.99',
+        period: 'par mois',
+        items: [
+          {
+            description: "Mise en place d'un blog",
+          },
+          {
+            description: '3 modifications mensuelles',
+          },
+          {
+            description: '+ pack basique',
+          },
+        ],
+      },
+    ]}
+  />
+</Layout>

@@ -13,4 +13,5 @@ updates:
     allow:
       dependency-type: "development"
     groups:
-      dependency-type: "development"
+      development-dependencies:
+        dependency-type: "development"

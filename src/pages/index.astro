@@ -6,6 +6,8 @@ import Features from '~/components/widgets/Features.astro';
 import Content from '~/components/widgets/Content.astro';
 
 import BlogLatestPosts from '~/components/widgets/BlogLatestPosts.astro';
+import Pricing from '~/components/widgets/Pricing.astro';
+import WidgetWrapper from '~/components/ui/WidgetWrapper.astro';
 
 const metadata = {
   title: 'Accueil',
@@ -23,13 +25,13 @@ const metadata = {
     }}
   >
     <Fragment slot="title">
-      Transformez votre entreprise avec <span class="text-accent highlight">Khalypso</span>
+      Digitalisez votre entreprise avec <span class="text-accent highlight">Khalypso</span>
     </Fragment>
 
     <Fragment slot="subtitle">
-      Avec une expertise éprouvée et une passion pour l'excellence, nous créons des logiciels <span
-        class="font-semibold">sur mesure</span
-      > qui répondent aux besoins uniques de votre entreprise.
+      Avec une expertise éprouvée et une passion pour l'excellence, nous ouvrons votre société <span
+        class="font-semibold">au digital</span
+      > pour répondre aux besoins uniques de votre entreprise.
     </Fragment>
   </Hero2>
 
@@ -37,8 +39,7 @@ const metadata = {
 
   <Features
     id="features"
-    title="Pourquoi Khalypso ?"
-    subtitle="Liassez-nous vous convaincre de nous faire confiance"
+    title="Pourquoi choisir Khalypso ?"
     columns={3}
     items={[
       {
@@ -59,9 +60,72 @@ const metadata = {
     ]}
   />
 
+  <Pricing
+    id="offres"
+    title="Notre offre"
+    subtitle="À chaque projet son offre, adaptez vos besoins au prix juste"
+    prices={[
+      {
+        title: 'Basique',
+        subtitle: 'Idéal pour démarrer votre présence en ligne',
+        price: '9.99',
+        period: 'par mois',
+        items: [
+          {
+            description: 'Site vitrine (5 pages maximum)',
+          },
+          {
+            description: 'Maintenance et mise à jour de sécurité journalière',
+          },
+          {
+            description: 'Référencement optimisé',
+          },
+          {
+            description: 'Site adapté à tous les écrans',
+          },
+          {
+            description: 'Liens vers vos différents réseaux',
+          },
+          {
+            description: 'Support par mail',
+          },
+        ],
+      },
+      {
+        title: 'Pro',
+        subtitle: 'Boosté votre site avec un contenu régulier',
+        price: '12.99',
+        period: 'par mois',
+        items: [
+          {
+            description: 'Pack basique',
+          },
+          {
+            description:
+              "Définition d'un gestionnaire de contenu. (La carte d'un restaurant, les articles d'un blog, etc)",
+          },
+          {
+            description: 'Mise en place de Google Analytics',
+          },
+          {
+            description: '3 modifications mensuelles',
+          },
+        ],
+      },
+    ]}
+  />
+
+  <WidgetWrapper>
+    <p class="text-muted text-center">
+      Vous avez besoin d'autre chose ?<br />
+      N'hésitez pas à <a href="/contact" class="font-semibold">nous contacter</a>.
+    </p>
+  </WidgetWrapper>
+
   <!-- Content Widget **************** -->
 
   <Content
+    id="realisations"
     title="Nos réalisations"
     subtitle="Découvrez les applications développées par nos soins"
     isReversed

@@ -6,8 +6,7 @@ import Features from '~/components/widgets/Features.astro';
 import Content from '~/components/widgets/Content.astro';
 
 import BlogLatestPosts from '~/components/widgets/BlogLatestPosts.astro';
-import Pricing from '~/components/widgets/Pricing.astro';
-import WidgetWrapper from '~/components/ui/WidgetWrapper.astro';
+import Steps from '~/components/widgets/Steps.astro';
 
 const metadata = {
   title: 'Accueil',
@@ -21,7 +20,7 @@ const metadata = {
     tagline="Editeur de logiciel web et mobile"
     image={{
       src: 'https://images.unsplash.com/photo-1580481072645-022f9a6dbf27?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80',
-      alt: 'AstroWind Hero Image',
+      alt: 'Illustration',
     }}
   >
     <Fragment slot="title">
@@ -60,67 +59,36 @@ const metadata = {
     ]}
   />
 
-  <Pricing
-    id="offres"
-    title="Notre offre"
-    subtitle="À chaque projet son offre, adaptez vos besoins au prix juste"
-    prices={[
+  <Steps
+    title="Faisons ensemble votre projet"
+    items={[
       {
-        title: 'Basique',
-        subtitle: 'Idéal pour démarrer votre présence en ligne',
-        price: '9.99',
-        period: 'par mois',
-        items: [
-          {
-            description: 'Site vitrine (5 pages maximum)',
-          },
-          {
-            description: 'Maintenance et mise à jour de sécurité journalière',
-          },
-          {
-            description: 'Référencement optimisé',
-          },
-          {
-            description: 'Site adapté à tous les écrans',
-          },
-          {
-            description: 'Liens vers vos différents réseaux',
-          },
-          {
-            description: 'Support par mail',
-          },
-        ],
+        title: '<a href="/contact" class="underline">Partagez-nous</a> votre besoin',
+        description:
+          'Que ça soit pour un besoin ponctuel ou un projet plus grand comme la mise en place de votre site internet, nous prendrons le temps de vous écouter',
+        icon: 'tabler:zoom',
       },
       {
-        title: 'Pro',
-        subtitle: 'Boosté votre site avec un contenu régulier',
-        price: '12.99',
-        period: 'par mois',
-        items: [
-          {
-            description: 'Pack basique',
-          },
-          {
-            description:
-              "Définition d'un gestionnaire de contenu. (La carte d'un restaurant, les articles d'un blog, etc)",
-          },
-          {
-            description: 'Mise en place de Google Analytics',
-          },
-          {
-            description: '3 modifications mensuelles',
-          },
-        ],
+        title: 'Nous définissons le devis',
+        description: 'Selon le temps requis ainsi que le travail demandé, nous établissons le devis pour votre projet',
+        icon: 'tabler:briefcase',
+      },
+      {
+        title: 'Nous créeons ensemble',
+        description: 'Afin de répondre au mieux à votre besoin, nous échangeons tout au long de la conception',
+        icon: 'tabler:paint',
+      },
+      {
+        title: 'Tout est prêt !',
+        description: 'Vous pouvez maintenant profitez !',
+        icon: 'tabler:check',
       },
     ]}
+    image={{
+      src: 'https://images.unsplash.com/photo-1616198814651-e71f960c3180?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=987&q=80',
+      alt: 'Steps image',
+    }}
   />
-
-  <WidgetWrapper>
-    <p class="text-muted text-center">
-      Vous avez besoin d'autre chose ?<br />
-      N'hésitez pas à <a href="/contact" class="font-semibold">nous contacter</a>.
-    </p>
-  </WidgetWrapper>
 
   <!-- Content Widget **************** -->
 

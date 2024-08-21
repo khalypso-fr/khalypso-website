@@ -5,10 +5,20 @@ import type { Props as FooterProps } from './components/widgets/Footer.astro';
 export const headerData = {
   links: [
     {
+      text: 'Nos réalisations',
+      href: getPermalink('/#realisations'),
+    },
+    {
       text: 'Blog',
       href: getBlogPermalink(),
     },
-    { text: 'Contact', href: getPermalink('/contact') },
+  ],
+  actions: [
+    {
+      text: 'Contactez-nous',
+      href: getPermalink('/contact'),
+      variant: 'primary',
+    },
   ],
 } satisfies HeaderProps;
 

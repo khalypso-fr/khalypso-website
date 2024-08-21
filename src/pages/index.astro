@@ -6,6 +6,7 @@ import Features from '~/components/widgets/Features.astro';
 import Content from '~/components/widgets/Content.astro';
 
 import BlogLatestPosts from '~/components/widgets/BlogLatestPosts.astro';
+import Steps from '~/components/widgets/Steps.astro';
 
 const metadata = {
   title: 'Accueil',
@@ -19,17 +20,17 @@ const metadata = {
     tagline="Editeur de logiciel web et mobile"
     image={{
       src: 'https://images.unsplash.com/photo-1580481072645-022f9a6dbf27?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80',
-      alt: 'AstroWind Hero Image',
+      alt: 'Illustration',
     }}
   >
     <Fragment slot="title">
-      Transformez votre entreprise avec <span class="text-accent highlight">Khalypso</span>
+      Digitalisez votre entreprise avec <span class="text-accent highlight">Khalypso</span>
     </Fragment>
 
     <Fragment slot="subtitle">
-      Avec une expertise éprouvée et une passion pour l'excellence, nous créons des logiciels <span
-        class="font-semibold">sur mesure</span
-      > qui répondent aux besoins uniques de votre entreprise.
+      Avec une expertise éprouvée et une passion pour l'excellence, nous ouvrons votre société <span
+        class="font-semibold">au digital</span
+      > pour répondre aux besoins uniques de votre entreprise.
     </Fragment>
   </Hero2>
 
@@ -37,8 +38,7 @@ const metadata = {
 
   <Features
     id="features"
-    title="Pourquoi Khalypso ?"
-    subtitle="Liassez-nous vous convaincre de nous faire confiance"
+    title="Pourquoi choisir Khalypso ?"
     columns={3}
     items={[
       {
@@ -59,9 +59,41 @@ const metadata = {
     ]}
   />
 
+  <Steps
+    title="Faisons ensemble votre projet"
+    items={[
+      {
+        title: '<a href="/contact" class="underline">Partagez-nous</a> votre besoin',
+        description:
+          'Que ça soit pour un besoin ponctuel ou un projet plus grand comme la mise en place de votre site internet, nous prendrons le temps de vous écouter',
+        icon: 'tabler:zoom',
+      },
+      {
+        title: 'Nous définissons le devis',
+        description: 'Selon le temps requis ainsi que le travail demandé, nous établissons le devis pour votre projet',
+        icon: 'tabler:briefcase',
+      },
+      {
+        title: 'Nous créeons ensemble',
+        description: 'Afin de répondre au mieux à votre besoin, nous échangeons tout au long de la conception',
+        icon: 'tabler:paint',
+      },
+      {
+        title: 'Tout est prêt !',
+        description: 'Vous pouvez maintenant profitez !',
+        icon: 'tabler:check',
+      },
+    ]}
+    image={{
+      src: 'https://images.unsplash.com/photo-1616198814651-e71f960c3180?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=987&q=80',
+      alt: 'Steps image',
+    }}
+  />
+
   <!-- Content Widget **************** -->
 
   <Content
+    id="realisations"
     title="Nos réalisations"
     subtitle="Découvrez les applications développées par nos soins"
     isReversed

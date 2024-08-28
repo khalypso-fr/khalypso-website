@@ -180,9 +180,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@astrojs/mdx@npm:^3.1.4":
-  version: 3.1.4
-  resolution: "@astrojs/mdx@npm:3.1.4"
+"@astrojs/mdx@npm:^3.1.5":
+  version: 3.1.5
+  resolution: "@astrojs/mdx@npm:3.1.5"
   dependencies:
     "@astrojs/markdown-remark": "npm:5.2.0"
     "@mdx-js/mdx": "npm:^3.0.1"
@@ -190,27 +190,27 @@ __metadata:
     es-module-lexer: "npm:^1.5.4"
     estree-util-visit: "npm:^2.0.0"
     gray-matter: "npm:^4.0.3"
-    hast-util-to-html: "npm:^9.0.1"
+    hast-util-to-html: "npm:^9.0.2"
     kleur: "npm:^4.1.5"
     rehype-raw: "npm:^7.0.0"
     remark-gfm: "npm:^4.0.0"
     remark-smartypants: "npm:^3.0.2"
     source-map: "npm:^0.7.4"
     unist-util-visit: "npm:^5.0.0"
-    vfile: "npm:^6.0.2"
+    vfile: "npm:^6.0.3"
   peerDependencies:
     astro: ^4.8.0
-  checksum: 10c0/937795f30d9f0392effcc1a1b984dd03f547cc31d4cbadbb2d969df59fba36c941e56cba33be4be817fce2d5372e51f2cc520333f2fe5a9931a3f586e8b9925d
+  checksum: 10c0/fa4478c264486442f8701ffe3f7927160941b6e0360eede5593b633f0e3cf227c6030d6fc05c0319d5c82534b53101201faa893e81e433f0177d75585938cd8e
   languageName: node
   linkType: hard
 
-"@astrojs/partytown@npm:^2.1.1":
-  version: 2.1.1
-  resolution: "@astrojs/partytown@npm:2.1.1"
+"@astrojs/partytown@npm:^2.1.2":
+  version: 2.1.2
+  resolution: "@astrojs/partytown@npm:2.1.2"
   dependencies:
     "@builder.io/partytown": "npm:^0.10.2"
     mrmime: "npm:^2.0.0"
-  checksum: 10c0/60bc3b472396675e7cc22f6506317b322a798b46857822c4d871be67294a1ffcba023e0871f64ade6907bd153762c9395e5eacb7dbfda099bd771d8100494295
+  checksum: 10c0/e439669805f1d80fdf926558e6a9630465201a11d228d4babd57f14f44daf1c7469d1d7b7fda2282ec2f150037f53940168bf76f38a93632affb6d50c979af1b
   languageName: node
   linkType: hard
 
@@ -1206,12 +1206,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@iconify-json/tabler@npm:^1.1.120":
-  version: 1.1.120
-  resolution: "@iconify-json/tabler@npm:1.1.120"
+"@iconify-json/tabler@npm:^1.1.121":
+  version: 1.1.121
+  resolution: "@iconify-json/tabler@npm:1.1.121"
   dependencies:
     "@iconify/types": "npm:*"
-  checksum: 10c0/27dfe3522cd7688e5263750d874cbc4587f9e1483af0877e03c1e9ec3f5fbb4fe9f2bdb7c0fc6ce3d8e740a795d6de9dc6d94d102f365abe3a9ad80fef03349a
+  checksum: 10c0/3d71cf2905b49084c976e17e49255a975c52d218dda271be3504b09c5fd48ee021395eafeffaaa7c61a144f4ca5f1cf4517789b790e90cd9f9c4bc212a805687
   languageName: node
   linkType: hard
 
@@ -1692,8 +1692,8 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@khalypso/website@workspace:."
   dependencies:
-    "@astrojs/mdx": "npm:^3.1.4"
-    "@astrojs/partytown": "npm:^2.1.1"
+    "@astrojs/mdx": "npm:^3.1.5"
+    "@astrojs/partytown": "npm:^2.1.2"
     "@astrojs/rss": "npm:^4.0.7"
     "@astrojs/sitemap": "npm:^3.1.6"
     "@astrojs/tailwind": "npm:5.1.0"
@@ -1702,8 +1702,8 @@ __metadata:
     "@eslint/js": "npm:^9.9.1"
     "@fontsource-variable/inter": "npm:^5.0.20"
     "@iconify-json/flat-color-icons": "npm:^1.1.11"
-    "@iconify-json/tabler": "npm:^1.1.120"
-    "@tailwindcss/typography": "npm:^0.5.14"
+    "@iconify-json/tabler": "npm:^1.1.121"
+    "@tailwindcss/typography": "npm:^0.5.15"
     "@types/eslint__js": "npm:^8.42.3"
     "@types/js-yaml": "npm:^4.0.9"
     "@types/lodash.merge": "npm:^4.6.9"
@@ -2197,9 +2197,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@tailwindcss/typography@npm:^0.5.14":
-  version: 0.5.14
-  resolution: "@tailwindcss/typography@npm:0.5.14"
+"@tailwindcss/typography@npm:^0.5.15":
+  version: 0.5.15
+  resolution: "@tailwindcss/typography@npm:0.5.15"
   dependencies:
     lodash.castarray: "npm:^4.4.0"
     lodash.isplainobject: "npm:^4.0.6"
@@ -2207,7 +2207,7 @@ __metadata:
     postcss-selector-parser: "npm:6.0.10"
   peerDependencies:
     tailwindcss: "*"
-  checksum: 10c0/98e8309ca6e7a78a4b06530c217a781bed1a8a10375072b678b40b789bfa6e4dc0aeac83a22489ef2bf7ef2fc9a33bdcd3541ae1f4e60c27215bb7e462a31b0b
+  checksum: 10c0/bd1a1d0ab06816afe129a49cb8a693b4f6ffe77748f5279f07ea29ea9fcb44ef24d1f8b1cfcffaf41dd9cb60065745897cbfc9dcabc57c8a60ceb89d594c97c6
   languageName: node
   linkType: hard
 
@@ -6650,7 +6650,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"hast-util-to-html@npm:^9.0.0, hast-util-to-html@npm:^9.0.1":
+"hast-util-to-html@npm:^9.0.0":
   version: 9.0.1
   resolution: "hast-util-to-html@npm:9.0.1"
   dependencies:
@@ -6667,6 +6667,25 @@ __metadata:
     stringify-entities: "npm:^4.0.0"
     zwitch: "npm:^2.0.4"
   checksum: 10c0/001199084700fad40392e708c9f440346fe01d2297758d871c181f425760de6535227a782f85b83d54b0bbddbdd25021a5f5608cd04e4ae8a93af5391be0db7b
+  languageName: node
+  linkType: hard
+
+"hast-util-to-html@npm:^9.0.2":
+  version: 9.0.2
+  resolution: "hast-util-to-html@npm:9.0.2"
+  dependencies:
+    "@types/hast": "npm:^3.0.0"
+    "@types/unist": "npm:^3.0.0"
+    ccount: "npm:^2.0.0"
+    comma-separated-tokens: "npm:^2.0.0"
+    hast-util-whitespace: "npm:^3.0.0"
+    html-void-elements: "npm:^3.0.0"
+    mdast-util-to-hast: "npm:^13.0.0"
+    property-information: "npm:^6.0.0"
+    space-separated-tokens: "npm:^2.0.0"
+    stringify-entities: "npm:^4.0.0"
+    zwitch: "npm:^2.0.4"
+  checksum: 10c0/37db32f9aa0b3c32c0d1e52362e8d0a91760a168f1e9ceab96fea15c9fb5ce2d34e7f8de907c71bd2ae8b54c3e86c578d929b1c9c760b9f887220932a58e479d
   languageName: node
   linkType: hard
 
@@ -13412,6 +13431,16 @@ __metadata:
     unist-util-stringify-position: "npm:^4.0.0"
     vfile-message: "npm:^4.0.0"
   checksum: 10c0/96b7e060b332ff1b05462053bd9b0f39062c00c5eabb78fc75603cc808d5f77c4379857fffca3e30a28e0aad2d51c065dfcd4a43fbe15b1fc9c2aaa9ac1be8e1
+  languageName: node
+  linkType: hard
+
+"vfile@npm:^6.0.3":
+  version: 6.0.3
+  resolution: "vfile@npm:6.0.3"
+  dependencies:
+    "@types/unist": "npm:^3.0.0"
+    vfile-message: "npm:^4.0.0"
+  checksum: 10c0/e5d9eb4810623f23758cfc2205323e33552fb5972e5c2e6587babe08fe4d24859866277404fb9e2a20afb71013860d96ec806cb257536ae463c87d70022ab9ef
   languageName: node
   linkType: hard
 

@@ -1714,7 +1714,7 @@ __metadata:
     astro-embed: "npm:^0.7.2"
     astro-eslint-parser: "npm:^1.0.2"
     astro-icon: "npm:^1.1.1"
-    decap-cms-app: "npm:^3.3.2"
+    decap-cms-app: "npm:^3.3.3"
     eslint: "npm:9.9.1"
     eslint-plugin-astro: "npm:^1.2.3"
     eslint-plugin-jsx-a11y: "npm:^6.9.0"
@@ -4325,9 +4325,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"decap-cms-app@npm:^3.3.2":
-  version: 3.3.2
-  resolution: "decap-cms-app@npm:3.3.2"
+"decap-cms-app@npm:^3.3.3":
+  version: 3.3.3
+  resolution: "decap-cms-app@npm:3.3.3"
   dependencies:
     "@emotion/react": "npm:^11.11.1"
     "@emotion/styled": "npm:^11.11.0"
@@ -4351,7 +4351,7 @@ __metadata:
     decap-cms-widget-boolean: "npm:^3.1.3"
     decap-cms-widget-code: "npm:^3.1.4"
     decap-cms-widget-colorstring: "npm:^3.1.3"
-    decap-cms-widget-datetime: "npm:^3.2.2"
+    decap-cms-widget-datetime: "npm:^3.2.3"
     decap-cms-widget-file: "npm:^3.1.3"
     decap-cms-widget-image: "npm:^3.1.3"
     decap-cms-widget-list: "npm:^3.2.2"
@@ -4371,7 +4371,7 @@ __metadata:
   peerDependencies:
     react: ^18.2.0
     react-dom: ^18.2.0
-  checksum: 10c0/efb8c873ce8648d1951451608960adf0874db39683668ef42b61def1f8c0c44a9c3544a3cf6a6308a8c8323a8c288abfd4f76ab09e79bcf6d7ede7fb90e01b5e
+  checksum: 10c0/f1f14612d1e3d65c5efd4a5006dee58bce61633bec0a108eb0a6b5cd5acf9a9201f3095068cabdd743d6434389219908c61d9df7f626f02975e9dff2b0467b78
   languageName: node
   linkType: hard
 
@@ -4735,15 +4735,15 @@ __metadata:
   languageName: node
   linkType: hard
 
-"decap-cms-widget-datetime@npm:^3.2.2":
-  version: 3.2.2
-  resolution: "decap-cms-widget-datetime@npm:3.2.2"
+"decap-cms-widget-datetime@npm:^3.2.3":
+  version: 3.2.3
+  resolution: "decap-cms-widget-datetime@npm:3.2.3"
   dependencies:
     dayjs: "npm:^1.11.10"
   peerDependencies:
     "@emotion/react": ^11.11.1
     react: ^18.2.0
-  checksum: 10c0/8cc17c17301123a57951809d6141322439da44277f84d1cd4895e098cedd4c88eb9faf073db93ec1f1be05595097a423828176769deb08328b4af6e453b7811e
+  checksum: 10c0/4205f21c51e3157ad00488888361ed8aa056a126d79e4401a944cd07d7a2d369a4aa31e91290001c7ca4f3c881c94b96626ee8614145ee8aa71400bae4131d5c
   languageName: node
   linkType: hard
 

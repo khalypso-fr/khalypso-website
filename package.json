@@ -32,18 +32,18 @@
     "unpic": "^3.18.0"
   },
   "devDependencies": {
-    "@astrojs/mdx": "^3.1.4",
-    "@astrojs/partytown": "^2.1.1",
+    "@astrojs/mdx": "^3.1.5",
+    "@astrojs/partytown": "^2.1.2",
     "@astrojs/tailwind": "5.1.0",
     "@eslint/js": "^9.9.1",
-    "@iconify-json/flat-color-icons": "^1.1.11",
-    "@iconify-json/tabler": "^1.1.120",
-    "@tailwindcss/typography": "^0.5.14",
+    "@iconify-json/flat-color-icons": "^1.2.0",
+    "@iconify-json/tabler": "^1.2.0",
+    "@tailwindcss/typography": "^0.5.15",
     "@types/eslint__js": "^8.42.3",
     "@types/js-yaml": "^4.0.9",
     "@types/lodash.merge": "^4.6.9",
-    "@typescript-eslint/eslint-plugin": "^8.3.0",
-    "@typescript-eslint/parser": "^8.3.0",
+    "@typescript-eslint/eslint-plugin": "^8.4.0",
+    "@typescript-eslint/parser": "^8.4.0",
     "astro-compress": "2.3.1",
     "astro-eslint-parser": "^1.0.2",
     "eslint": "9.9.1",
@@ -60,7 +60,7 @@
     "tailwind-merge": "^2.5.2",
     "tailwindcss": "^3.4.10",
     "typescript": "^5.5.4",
-    "typescript-eslint": "^8.3.0"
+    "typescript-eslint": "^8.4.0"
   },
   "packageManager": "yarn@4.4.0"
 }

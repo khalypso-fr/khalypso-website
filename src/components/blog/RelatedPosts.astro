@@ -5,14 +5,12 @@ import { getRelatedPosts } from '~/utils/blog';
 import BlogHighlightedPosts from '../widgets/BlogHighlightedPosts.astro';
 import type { Post } from '~/types';
 import { getBlogPermalink } from '~/utils/permalinks';
-import { retrieveI18n } from '~/utils/i18n';
 
 export interface Props {
   post: Post;
 }
 
 const { post } = Astro.props;
-const { t } = await retrieveI18n();
 
 const relatedPosts = post.tags ? await getRelatedPosts(post, 4) : [];
 ---
@@ -21,8 +19,8 @@ const relatedPosts = post.tags ? await getRelatedPosts(post, 4) : [];
   APP_BLOG.isRelatedPostsEnabled ? (
     <BlogHighlightedPosts
       classes={{ container: 'pt-0 lg:pt-0 md:pt-0' }}
-      title={t('components:relatedPosts.title')}
-      linkText={t('components:relatedPosts.linkText')}
+      title="Articles similaires"
+      linkText="Voir tous les articles"
       linkUrl={getBlogPermalink()}
       postIds={relatedPosts.map((post) => post.id)}
     />

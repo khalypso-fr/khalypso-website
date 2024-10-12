@@ -247,12 +247,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@astrolib/analytics@npm:^0.5.0":
-  version: 0.5.0
-  resolution: "@astrolib/analytics@npm:0.5.0"
+"@astrolib/analytics@npm:^0.6.1":
+  version: 0.6.1
+  resolution: "@astrolib/analytics@npm:0.6.1"
   peerDependencies:
-    astro: ^1.2.1 || ^2.0.0 || ^3.0.0-beta.0 || ^3.0.0 || ^4.0.0
-  checksum: 10c0/7c9c6bc761c99382751d02cf2baa6d691ecef6537ac111c7302fbcf6b66e2a3f231264feee5d5741ac3326e3fdcfc35b1c5e77c0a9a8a247089bab1cca6cb762
+    astro: ^1.2.1 || ^2.0.0 || ^3.0.0-beta.0 || ^3.0.0 || ^4.0.0 || ^5.0.0-beta.0 || ^5.0.0
+  checksum: 10c0/6ef5b7a9bfb77f7d4eeb6c1ba79270847cafb70dc94c0e289389b15f1de0932847b1c033c5ca0dd361f07f3e204f98765341c785198390d9134999b5ed4c384c
   languageName: node
   linkType: hard
 
@@ -1617,7 +1617,7 @@ __metadata:
     "@astrojs/rss": "npm:^4.0.7"
     "@astrojs/sitemap": "npm:^3.2.0"
     "@astrojs/tailwind": "npm:5.1.1"
-    "@astrolib/analytics": "npm:^0.5.0"
+    "@astrolib/analytics": "npm:^0.6.1"
     "@astrolib/seo": "npm:^1.0.0-beta.6"
     "@eslint/js": "npm:^9.11.1"
     "@fontsource-variable/inter": "npm:^5.1.0"

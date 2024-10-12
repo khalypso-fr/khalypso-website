@@ -5,5 +5,7 @@ updates:
     schedule:
       interval: "daily"
     groups:
+      production-dependencies:
+        dependency-type: "production"
       development-dependencies:
         dependency-type: "development"

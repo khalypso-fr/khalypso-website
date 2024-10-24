@@ -1814,7 +1814,7 @@ __metadata:
     "@typescript-eslint/eslint-plugin": "npm:^8.11.0"
     "@typescript-eslint/parser": "npm:^8.11.0"
     astro: "npm:4.16.7"
-    astro-compress: "npm:2.3.4"
+    astro-compress: "npm:2.3.5"
     astro-embed: "npm:^0.7.4"
     astro-eslint-parser: "npm:^1.0.3"
     astro-icon: "npm:^1.1.1"
@@ -3270,9 +3270,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"astro-compress@npm:2.3.4":
-  version: 2.3.4
-  resolution: "astro-compress@npm:2.3.4"
+"astro-compress@npm:2.3.5":
+  version: 2.3.5
+  resolution: "astro-compress@npm:2.3.5"
   dependencies:
     "@playform/pipe": "npm:0.1.1"
     "@types/csso": "npm:5.0.4"
@@ -3288,7 +3288,7 @@ __metadata:
     sharp: "npm:0.33.5"
     svgo: "npm:3.3.2"
     terser: "npm:5.36.0"
-  checksum: 10c0/a6916de82f739c9e6602e8caa89eff67648fe7206330d27f751e146dc438479f6935a0d3afa8e98bcbbf980ce7769c5e078bb15a9ae578a7cc742dc885f88305
+  checksum: 10c0/b4d7951c24603f4dcb1a2083ca274e5ee98e3dad149ae98160dc8f5251d5d66a9ac57ae06dbd234c8025d5b9111a8834da66799c989f693289fae07c54ad9bbb
   languageName: node
   linkType: hard
 

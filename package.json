@@ -64,5 +64,5 @@
   "resolutions": {
     "astro": "4.16.18"
   },
-  "packageManager": "yarn@4.5.0"
+  "packageManager": "yarn@4.6.0"
 }

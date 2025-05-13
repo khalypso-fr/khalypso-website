@@ -6,9 +6,9 @@ import { defineConfig, sharpImageService } from "astro/config";
 import mdx from "@astrojs/mdx";
 import partytown from "@astrojs/partytown";
 import sitemap from "@astrojs/sitemap";
-import tailwind from "@astrojs/tailwind";
 import compress from "astro-compress";
 import icon from "astro-icon";
+import tailwindcss from "@tailwindcss/vite";
 
 import astrowind from "./vendor/integration";
 
@@ -35,9 +35,6 @@ export default defineConfig({
 	output: "static",
 
 	integrations: [
-		tailwind({
-			applyBaseStyles: false,
-		}),
 		sitemap(),
 		mdx(),
 		icon({
@@ -89,6 +86,7 @@ export default defineConfig({
 	},
 
 	vite: {
+		plugins: [tailwindcss()],
 		resolve: {
 			alias: {
 				"~": path.resolve(__dirname, "./src"),

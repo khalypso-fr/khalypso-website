@@ -1,13 +1,13 @@
 ---
-import { APP_BLOG } from 'astrowind:config';
+import { APP_BLOG } from "astrowind:config";
 
-import { getRelatedPosts } from '~/utils/blog';
-import BlogHighlightedPosts from '../widgets/BlogHighlightedPosts.astro';
-import type { Post } from '~/types';
-import { getBlogPermalink } from '~/utils/permalinks';
+import type { Post } from "~/types";
+import { getRelatedPosts } from "~/utils/blog";
+import { getBlogPermalink } from "~/utils/permalinks";
+import BlogHighlightedPosts from "../widgets/BlogHighlightedPosts.astro";
 
 export interface Props {
-  post: Post;
+	post: Post;
 }
 
 const { post } = Astro.props;

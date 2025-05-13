@@ -1,8 +1,16 @@
 ---
-import type { Form as Props } from '~/types';
-import Button from '~/components/ui/Button.astro';
+import Button from "~/components/ui/Button.astro";
+import type { Form as Props } from "~/types";
 
-const { action, inputs, textarea, disclaimer, button = 'Contact us', description = '', name } = Astro.props;
+const {
+	action,
+	inputs,
+	textarea,
+	disclaimer,
+	button = "Contact us",
+	description = "",
+	name,
+} = Astro.props;
 ---
 
 <form action={action} name={name} data-netlify="true">

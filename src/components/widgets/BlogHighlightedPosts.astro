@@ -1,32 +1,32 @@
 ---
-import { APP_BLOG } from 'astrowind:config';
+import { APP_BLOG } from "astrowind:config";
 
-import Grid from '~/components/blog/Grid.astro';
+import Grid from "~/components/blog/Grid.astro";
 
-import { getBlogPermalink } from '~/utils/permalinks';
-import { findPostsByIds } from '~/utils/blog';
-import WidgetWrapper from '~/components/ui/WidgetWrapper.astro';
-import type { Widget } from '~/types';
+import WidgetWrapper from "~/components/ui/WidgetWrapper.astro";
+import type { Widget } from "~/types";
+import { findPostsByIds } from "~/utils/blog";
+import { getBlogPermalink } from "~/utils/permalinks";
 
 export interface Props extends Widget {
-  title?: string;
-  linkText?: string;
-  linkUrl?: string | URL;
-  information?: string;
-  postIds: string[];
+	title?: string;
+	linkText?: string;
+	linkUrl?: string | URL;
+	information?: string;
+	postIds: string[];
 }
 
 const {
-  title = await Astro.slots.render('title'),
-  linkText = 'View all posts',
-  linkUrl = getBlogPermalink(),
-  information = await Astro.slots.render('information'),
-  postIds = [],
+	title = await Astro.slots.render("title"),
+	linkText = "View all posts",
+	linkUrl = getBlogPermalink(),
+	information = await Astro.slots.render("information"),
+	postIds = [],
 
-  id,
-  isDark = false,
-  classes = {},
-  bg = await Astro.slots.render('bg'),
+	id,
+	isDark = false,
+	classes = {},
+	bg = await Astro.slots.render("bg"),
 } = Astro.props;
 
 const posts = APP_BLOG.isEnabled ? await findPostsByIds(postIds) : [];

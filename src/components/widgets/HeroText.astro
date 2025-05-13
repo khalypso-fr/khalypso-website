@@ -1,23 +1,23 @@
 ---
-import type { CallToAction } from '~/types';
-import Button from '~/components/ui/Button.astro';
+import Button from "~/components/ui/Button.astro";
+import type { CallToAction } from "~/types";
 
 export interface Props {
-  title?: string;
-  subtitle?: string;
-  tagline?: string;
-  content?: string;
-  callToAction?: string | CallToAction;
-  callToAction2?: string | CallToAction;
+	title?: string;
+	subtitle?: string;
+	tagline?: string;
+	content?: string;
+	callToAction?: string | CallToAction;
+	callToAction2?: string | CallToAction;
 }
 
 const {
-  title = await Astro.slots.render('title'),
-  subtitle = await Astro.slots.render('subtitle'),
-  tagline,
-  content = await Astro.slots.render('content'),
-  callToAction = await Astro.slots.render('callToAction'),
-  callToAction2 = await Astro.slots.render('callToAction2'),
+	title = await Astro.slots.render("title"),
+	subtitle = await Astro.slots.render("subtitle"),
+	tagline,
+	content = await Astro.slots.render("content"),
+	callToAction = await Astro.slots.render("callToAction"),
+	callToAction2 = await Astro.slots.render("callToAction2"),
 } = Astro.props;
 ---
 

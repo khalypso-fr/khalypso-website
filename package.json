@@ -24,7 +24,7 @@
 		"@astrojs/sitemap": "^3.4.0",
 		"@astrojs/mdx": "^4.2.6",
 		"@biomejs/biome": "1.9.4",
-		"@iconify-json/flat-color-icons": "^1.2.1",
+		"@iconify-json/tabler": "^1.2.17",
 		"@tailwindcss/typography": "^0.5.16",
 		"@tailwindcss/vite": "^4.1.7",
 		"daisyui": "^5.0.35",

@@ -1,13 +1,13 @@
 ---
-import Image from "astro/components/Image.astro";
-import type { LocalImageProps, RemoteImageProps } from "astro:assets";
+import type { Props as PictureProps } from "astro/components/Picture.astro";
+import { Picture } from "astro:assets";
 
 interface Props {
   tagline?: string;
   title?: string;
   subtitle?: string;
   content?: string;
-  image?: LocalImageProps | RemoteImageProps;
+  image?: PictureProps;
 }
 
 const {
@@ -24,7 +24,11 @@ const {
     {
       image && (
         <div class="flex-[1]">
-          <Image {...image} class:list={["rounded-lg", "shadow-2xl"]} />
+          <Picture
+            formats={["avif", "webp"]}
+            {...image}
+            class:list={["rounded-lg", "shadow-2xl"]}
+          />
         </div>
       )
     }

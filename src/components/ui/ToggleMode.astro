@@ -1,0 +1,25 @@
+---
+import { Icon } from "astro-icon/components";
+---
+
+<label class="toggle toggle-xs text-base-content">
+  <input id="themeToggle" data-toggle-theme="dark,light" type="checkbox" />
+  <Icon name="tabler:sun" class="w-3 h-3" />
+  <Icon name="tabler:moon" class="w-3 h-3" />
+</label>
+
+<script is:inline>
+  const theme = (() => {
+    const localStorageTheme = localStorage?.getItem("theme") ?? "";
+    if (["dark", "light"].includes(localStorageTheme)) {
+      return localStorageTheme;
+    }
+    if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
+      return "dark";
+    }
+    return "light";
+  })();
+  if (theme === "dark") {
+    document.getElementById('themeToggle').setAttribute("checked", "true");
+  }
+</script>

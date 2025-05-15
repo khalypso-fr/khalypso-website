@@ -1,27 +1,31 @@
 ---
 import { Icon } from "astro-icon/components";
+import ToggleMode from "./ToggleMode.astro";
 
 interface Link {
-	text?: string;
-	href?: string;
-	ariaLabel?: string;
-	icon?: string;
+  text?: string;
+  href?: string;
+  ariaLabel?: string;
+  icon?: string;
 }
 
 interface Links {
-	title?: string;
-	links: Array<Link>;
+  title?: string;
+  links: Array<Link>;
 }
 
 export interface Props {
-	links: Array<Links>;
-	socialLinks: Array<Link>;
+  links: Array<Links>;
+  socialLinks: Array<Link>;
 }
 
 const { links = [], socialLinks = [] } = Astro.props;
 ---
 
 <footer class="footer sm:footer-horizontal bg-base-300 text-base-content p-10">
+  <aside>
+    <ToggleMode />
+  </aside>
   {
     links.map(({ title, links }) => (
       <nav>

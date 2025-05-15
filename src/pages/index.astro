@@ -1,6 +1,7 @@
 ---
 import Hero from "~/components/ui/Hero.astro";
 import Layout from "~/layouts/PageLayout.astro";
+import image from "~/assets/images/astronaut-8785566_1920.png";
 
 const metadata = {
   title: "Accueil",
@@ -11,10 +12,8 @@ const metadata = {
   <Hero
     tagline="Editeur de logiciel web et mobile"
     image={{
-      src: "https://images.unsplash.com/photo-1580481072645-022f9a6dbf27?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80",
+      src: image,
       alt: "Illustration",
-      loading: "eager",
-      inferSize: true,
     }}
   >
     <Fragment slot="title">

@@ -8,6 +8,8 @@ import { fileURLToPath } from "node:url";
 
 import partytown from "@astrojs/partytown";
 
+import compress from "astro-compress";
+
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
 export default defineConfig({
@@ -33,6 +35,18 @@ export default defineConfig({
 			},
 		}),
 		partytown(),
+		compress({
+			CSS: true,
+			HTML: {
+				"html-minifier-terser": {
+					removeAttributeQuotes: false,
+				},
+			},
+			Image: false,
+			JavaScript: true,
+			SVG: false,
+			Logger: 1,
+		}),
 	],
 	image: {
 		service: sharpImageService(),

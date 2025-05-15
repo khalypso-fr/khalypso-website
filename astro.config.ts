@@ -21,17 +21,6 @@ export default defineConfig({
 		icon({
 			include: {
 				tabler: ["*"],
-				"flat-color-icons": [
-					"template",
-					"gallery",
-					"approval",
-					"document",
-					"advertising",
-					"currency-exchange",
-					"voice-presentation",
-					"business-contact",
-					"database",
-				],
 			},
 		}),
 		partytown(),
@@ -48,10 +37,6 @@ export default defineConfig({
 			Logger: 1,
 		}),
 	],
-	image: {
-		service: sharpImageService(),
-		domains: ["cdn.pixabay.com"],
-	},
 	vite: {
 		plugins: [tailwindcss()],
 		resolve: {

@@ -31,5 +31,8 @@
 		"sharp": "0.34.1",
 		"tailwindcss": "^4.1.7",
 		"typescript": "^5.8.3"
+	},
+	"dependencies": {
+		"@astrojs/partytown": "^2.1.4"
 	}
 }

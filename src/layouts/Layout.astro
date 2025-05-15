@@ -1,7 +1,7 @@
 ---
 import "~/assets/styles/tailwind.css";
 
-import { ViewTransitions } from "astro:transitions";
+import { ClientRouter } from "astro:transitions";
 import Favicons from "~/components/Favicons.astro";
 import { SEO, type Props as SEOProps } from "astro-seo";
 import { GoogleAnalytics } from "astro-analytics";
@@ -38,7 +38,7 @@ const { metadata = {} } = Astro.props;
       content="orcPxI47GSa-cRvY11tUe6iGg2IO_RPvnA1q95iEM3M"
     />
     <GoogleAnalytics id="G-0F3422HG5J" />
-    <ViewTransitions fallback="swap" />
+    <ClientRouter fallback="swap" />
   </head><body class="antialiased tracking-tight">
     <slot />
   </body>

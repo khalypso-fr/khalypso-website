@@ -6,10 +6,12 @@ import icon from "astro-icon";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 
+import partytown from "@astrojs/partytown";
+
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
 export default defineConfig({
-	site: 'https://khalypso.fr',
+	site: "https://khalypso.fr",
 	output: "static",
 	integrations: [
 		sitemap(),
@@ -30,6 +32,7 @@ export default defineConfig({
 				],
 			},
 		}),
+		partytown(),
 	],
 	image: {
 		service: sharpImageService(),
@@ -39,7 +42,7 @@ export default defineConfig({
 		plugins: [tailwindcss()],
 		resolve: {
 			alias: {
-				"~":  path.resolve(__dirname, "./src"),
+				"~": path.resolve(__dirname, "./src"),
 			},
 		},
 	},

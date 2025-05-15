@@ -1,31 +1,25 @@
 ---
-import Announcement from "~/components/widgets/Announcement.astro";
-import Footer from "~/components/widgets/Footer.astro";
-import Header from "~/components/widgets/Header.astro";
-import Layout from "~/layouts/Layout.astro";
+import Footer from "~/components/ui/Footer.astro";
+import Header from "~/components/ui/Header.astro";
+import Layout, { type Props as LayoutProps } from "~/layouts/Layout.astro";
 
 import { footerData, headerData } from "~/navigation";
 
-import type { MetaData } from "~/types";
-
 export interface Props {
-	metadata?: MetaData;
+  metadata?: LayoutProps["metadata"];
 }
 
 const { metadata } = Astro.props;
 ---
 
 <Layout metadata={metadata}>
-  <slot name="announcement">
-    <Announcement />
-  </slot>
   <slot name="header">
-    <Header {...headerData} isSticky showRssFeed showToggleTheme />
+    <Header {...headerData} />
   </slot>
-  <main>
+  <main class="bg-base-200">
     <slot />
   </main>
   <slot name="footer">
     <Footer {...footerData} />
-  </slot>
-</Layout>
+  </slot></Layout
+>

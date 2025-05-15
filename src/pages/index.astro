@@ -1,161 +1,31 @@
 ---
+import Hero from "~/components/ui/Hero.astro";
 import Layout from "~/layouts/PageLayout.astro";
 
-import Content from "~/components/widgets/Content.astro";
-import Features from "~/components/widgets/Features.astro";
-import Hero2 from "~/components/widgets/Hero2.astro";
-
-import BlogLatestPosts from "~/components/widgets/BlogLatestPosts.astro";
-import Steps from "~/components/widgets/Steps.astro";
-
 const metadata = {
-	title: "Accueil",
+  title: "Accueil",
 };
 ---
 
 <Layout metadata={metadata}>
-  <!-- Hero2 Widget ******************* -->
-
-  <Hero2
+  <Hero
     tagline="Editeur de logiciel web et mobile"
     image={{
-      src: 'https://images.unsplash.com/photo-1580481072645-022f9a6dbf27?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80',
-      alt: 'Illustration',
+      src: "https://images.unsplash.com/photo-1580481072645-022f9a6dbf27?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80",
+      alt: "Illustration",
+      loading: "eager",
+      inferSize: true,
     }}
   >
     <Fragment slot="title">
-      Digitalisez votre entreprise avec <span class="text-accent highlight">Khalypso</span>
+      Digitalisez votre entreprise avec <span class="text-accent highlight"
+        >Khalypso</span
+      >
     </Fragment>
-
-    <Fragment slot="subtitle">
-      Avec une expertise éprouvée et une passion pour l'excellence, nous ouvrons votre société <span
-        class="font-semibold">au digital</span
-      > pour répondre aux besoins uniques de votre entreprise.
-    </Fragment>
-  </Hero2>
-
-  <!-- Features Widget *************** -->
-
-  <Features
-    id="features"
-    title="Pourquoi choisir Khalypso ?"
-    columns={3}
-    items={[
-      {
-        title: 'Un design sur-mesure et personnalisable pour votre entreprise',
-        description: `L'intégration de votre charte graphique se fait aisément sur notre modèle.`,
-        icon: 'tabler:artboard',
-      },
-      {
-        title: 'Compatibilité optimale pour tous les navigateurs et écrans',
-        description: "Votre site se doit d'être disponible par tous et pour tous.",
-        icon: 'tabler:podium',
-      },
-      {
-        title: 'Optimisé SEO',
-        description: `Avoir un beau site, c'est bien. Pouvoir le montrer, c'est mieux ! Nous suivons les meilleurs pratiques SEO pour que votre site soit le plus rapide, accessible et optimisé possible.`,
-        icon: 'tabler:eyeglass',
-      },
-    ]}
-  />
-
-  <Steps
-    title="Faisons ensemble votre projet"
-    items={[
-      {
-        title: '<a href="/contact" class="underline">Partagez-nous</a> votre besoin',
-        description:
-          'Que ça soit pour un besoin ponctuel ou un projet plus grand comme la mise en place de votre site internet, nous prendrons le temps de vous écouter',
-        icon: 'tabler:zoom',
-      },
-      {
-        title: 'Nous définissons le devis',
-        description: 'Selon le temps requis ainsi que le travail demandé, nous établissons le devis pour votre projet',
-        icon: 'tabler:briefcase',
-      },
-      {
-        title: 'Nous créeons ensemble',
-        description: 'Afin de répondre au mieux à votre besoin, nous échangeons tout au long de la conception',
-        icon: 'tabler:paint',
-      },
-      {
-        title: 'Tout est prêt !',
-        description: 'Vous pouvez maintenant profitez !',
-        icon: 'tabler:check',
-      },
-    ]}
-    image={{
-      src: 'https://images.unsplash.com/photo-1616198814651-e71f960c3180?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=987&q=80',
-      alt: 'Steps image',
-    }}
-  />
-
-  <!-- Content Widget **************** -->
-
-  <Content
-    id="realisations"
-    title="Nos réalisations"
-    subtitle="Découvrez les applications développées par nos soins"
-    isReversed
-    items={[
-      {
-        classes: {
-          icon: 'hidden',
-        },
-        description:
-          'Vous en avez assez de chercher désespérément une boîte aux lettres quand vous en avez le plus besoin ? Ne cherchez plus ! "Chasseur de Boîtes" est là pour vous simplifier la vie. Notre application intuitive et facile à utiliser vous aide à localiser les boîtes aux lettres les plus proches de vous ou dans une zone spécifique de votre choix.',
-      },
-    ]}
-    callToAction={{
-      variant: 'primary',
-      text: 'Disponible sur Android',
-      icon: 'tabler:brand-google-play',
-      href: 'https://play.google.com/store/apps/details?id=fr.khalypso.maboiteauxlettres',
-    }}
-    image={{
-      src: '~/assets/images/chasseurs_de_boites.png',
-      alt: 'Logo de Chasseurs de Boites',
-      layout: 'cover',
-    }}
-  >
     <Fragment slot="content">
-      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl">Chasseurs de Boîtes</h3>
+      Innovons ensemble : des solutions logicielles <span class="font-semibold"
+        >sur mesure</span
+      > pour propulser votre entreprise vers l'avenir.
     </Fragment>
-  </Content>
-
-  <Content
-    items={[
-      {
-        classes: {
-          icon: 'hidden',
-        },
-        description:
-          'Bellezza di Em est votre destination de choix pour des ongles élégants et soignés. Nous offrons des services de prothésie ongulaire de haute qualité, adaptés à vos goûts et besoins. Faites confiance à notre expertise pour sublimer vos mains avec des créations uniques et raffinées.',
-      },
-    ]}
-    callToAction={{
-      target: '_blank',
-      variant: 'primary',
-      text: 'Voir le site',
-      icon: 'tabler:chevron-right',
-      href: 'https://www.bellezzadiem.fr',
-    }}
-    image={{
-      src: '~/assets/images/bellezzadiem.png',
-      alt: 'Logo de Bellezza di Em',
-      layout: 'cover',
-    }}
-  >
-    <Fragment slot="content">
-      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl">Bellezza di Em</h3>
-    </Fragment>
-  </Content>
-
-  <!-- BlogLatestPost Widget **************** -->
-
-  <BlogLatestPosts id="blog" title="Restez informés de notre actualité">
-    <Fragment slot="bg">
-      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
-    </Fragment>
-  </BlogLatestPosts>
+  </Hero>
 </Layout>

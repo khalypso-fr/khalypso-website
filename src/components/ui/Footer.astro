@@ -1,0 +1,55 @@
+---
+import { Icon } from "astro-icon/components";
+
+interface Link {
+	text?: string;
+	href?: string;
+	ariaLabel?: string;
+	icon?: string;
+}
+
+interface Links {
+	title?: string;
+	links: Array<Link>;
+}
+
+export interface Props {
+	links: Array<Links>;
+	socialLinks: Array<Link>;
+}
+
+const { links = [], socialLinks = [] } = Astro.props;
+---
+
+<footer class="footer sm:footer-horizontal bg-base-300 text-base-content p-10">
+  {
+    links.map(({ title, links }) => (
+      <nav>
+        <h6 class="footer-title">{title}</h6>
+        {links.map((link) => (
+          <a
+            class="link link-hover"
+            aria-label={link.ariaLabel}
+            href={link.href}
+          >
+            {link.text}
+          </a>
+        ))}
+      </nav>
+    ))
+  }
+  {
+    socialLinks.length > 0 && (
+      <nav>
+        <h6 class="footer-title">Réseaux sociaux</h6>
+        <div class="grid grid-flow-col gap-4">
+          {socialLinks.map(({ href, ariaLabel, icon }) => (
+            <a href={href} aria-label={ariaLabel} class="btn btn-ghost">
+              {icon && <Icon name={icon} class="w-5 h-5" />}
+            </a>
+          ))}
+        </div>
+      </nav>
+    )
+  }
+</footer>

@@ -1,23 +1,11 @@
-import type { Props as FooterProps } from "./components/widgets/Footer.astro";
-import type { Props as HeaderProps } from "./components/widgets/Header.astro";
-import { getBlogPermalink, getPermalink } from "./utils/permalinks";
+import type { Props as FooterProps } from "./components/ui/Footer.astro";
+import type { Props as HeaderProps } from "./components/ui/Header.astro";
 
 export const headerData = {
-	links: [
-		{
-			text: "Nos réalisations",
-			href: getPermalink("/#realisations"),
-		},
-		{
-			text: "Blog",
-			href: getBlogPermalink(),
-		},
-	],
 	actions: [
 		{
 			text: "Contactez-nous",
-			href: getPermalink("/contact"),
-			variant: "primary",
+			href: "/contact",
 		},
 	],
 } satisfies HeaderProps;
@@ -25,17 +13,18 @@ export const headerData = {
 export const footerData = {
 	links: [
 		{
+			title: "A propos",
+			links: [{ text: "Mentions légales", href: "/mentions-legales" }],
+		},
+		{
 			title: "Mentions légales pour applications",
 			links: [
 				{
 					text: "Chasseurs de boîtes",
-					href: getPermalink("/softwares/chasseurs-de-boites"),
+					href: "/apps/chasseurs-de-boites",
 				},
 			],
 		},
-	],
-	secondaryLinks: [
-		{ text: "Mentions légales", href: getPermalink("/mentions-legales") },
 	],
 	socialLinks: [
 		{

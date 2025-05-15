@@ -1,0 +1,38 @@
+---
+import PageLayout from "~/layouts/PageLayout.astro";
+
+const metadata = {
+  title: "Contact",
+};
+---
+
+<PageLayout metadata={metadata}>
+  <div class="min-h-screen flex items-center justify-center">
+    <div class="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
+      <div class="card-body">
+        <h2 class="text-2xl font-bold">Contactez-nous</h2>
+        <p class="text-sm text-muted">
+          Vous avez une question ou un commentaire ? Remplissez le formulaire
+          ci-dessous et nous vous répondrons dans les plus brefs délais.
+        </p>
+        <form name="contact" method="POST" data-netlify="true">
+          <fieldset class="flex flex-col gap-4 fieldset">
+            <label class="label" for="email">Votre e-mail</label>
+            <input id="email" type="email" required class="input" />
+            <label class="label" for="message">Message</label>
+            <textarea id="message" required class="textarea"></textarea>
+            <div class="flex gap-2 mr-4">
+              <input id="consent" type="checkbox" required class="checkbox checkbox-xs" />
+              <label class="label text-wrap" for="consent"
+                >En soumettant ce formulaire de contact, vous reconnaissez et
+                acceptez la collecte des informations personnelles qui lui
+                sont données dans le cadre de cette prise de contact.</label
+              >
+            </div>
+            <button class="btn btn-neutral mt-4" type="submit">Envoyer</button>
+          </fieldset>
+        </form>
+      </div>
+    </div>
+  </div>
+</PageLayout>

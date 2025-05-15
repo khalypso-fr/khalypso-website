@@ -1,0 +1,89 @@
+---
+import { Icon } from "astro-icon/components";
+import { SITE } from "~/config";
+import { trimSlash } from "~/utils";
+
+interface Link {
+  text?: string;
+  href?: string;
+  ariaLabel?: string;
+  icon?: string;
+}
+
+interface Action {
+  text?: string;
+  href?: string;
+  ariaLabel?: string;
+}
+
+export interface Props {
+  title?: string;
+  links?: Array<Link>;
+  actions?: Array<Action>;
+}
+
+const { title = SITE.name, links = [], actions = [] } = Astro.props;
+
+const currentPath = `/${trimSlash(new URL(Astro.url).pathname)}`;
+---
+
+<div class="navbar bg-base-100 shadow-sm sticky top-0 z-50">
+  <div class="navbar-start">
+    {
+      links.length > 0 && (
+        <div class="dropdown">
+          <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+            <Icon name="tabler:menu-4" class="h-5 w-5" />
+          </div>
+          <ul
+            tabindex="0"
+            class="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow"
+          >
+            {links.map((link) => (
+              <li>
+                <a
+                  href={link.href}
+                  aria-label={link.ariaLabel}
+                  class:list={[{ "menu-active": link.href === currentPath }]}
+                >
+                  {link.text}
+                </a>
+              </li>
+            ))}
+          </ul>
+        </div>
+      )
+    }
+    <a class="btn btn-ghost text-xl" href="/">{title}</a>
+  </div>
+  <div class="navbar-center hidden lg:flex">
+    <ul class="menu menu-horizontal px-1">
+      {
+        links.map((link) => (
+          <li>
+            <a
+              href={link.href}
+              aria-label={link.ariaLabel}
+              class:list={[{ "menu-active": link.href === currentPath }]}
+            >
+              {link.text}
+            </a>
+          </li>
+        ))
+      }
+    </ul>
+  </div>
+  <div class="navbar-end">
+    {
+      actions.map((action) => (
+        <a
+          href={action.href}
+          class="btn btn-primary"
+          aria-label={action.ariaLabel}
+        >
+          {action.text}
+        </a>
+      ))
+    }
+  </div>
+</div>

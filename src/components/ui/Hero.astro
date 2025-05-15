@@ -1,0 +1,42 @@
+---
+import Image from "astro/components/Image.astro";
+import type { LocalImageProps, RemoteImageProps } from "astro:assets";
+
+interface Props {
+  tagline?: string;
+  title?: string;
+  subtitle?: string;
+  content?: string;
+  image?: LocalImageProps | RemoteImageProps;
+}
+
+const {
+  tagline = await Astro.slots.render("tagline"),
+  title = await Astro.slots.render("title"),
+  subtitle = await Astro.slots.render("subtitle"),
+  content = await Astro.slots.render("content"),
+  image,
+} = Astro.props;
+---
+
+<div class="hero min-h-screen">
+  <div class="hero-content flex-col lg:flex-row-reverse">
+    {
+      image && (
+        <div class="flex-[1]">
+          <Image {...image} class:list={["rounded-lg", "shadow-2xl"]} />
+        </div>
+      )
+    }
+    <div class="flex-[1]">
+      {
+        tagline && (
+          <h1 class="text-xl font-bold text-primary" set:html={tagline} />
+        )
+      }
+      {title && <h1 class="text-5xl font-bold" set:html={title} />}
+      {subtitle && <h2 class="text-2xl" set:html={subtitle} />}
+      {content && <p class="py-6" set:html={content} />}
+    </div>
+  </div>
+</div>

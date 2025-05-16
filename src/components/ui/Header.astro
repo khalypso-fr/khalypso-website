@@ -4,22 +4,22 @@ import { SITE } from "~/config";
 import { trimSlash } from "~/utils";
 
 interface Link {
-  text?: string;
-  href?: string;
-  ariaLabel?: string;
-  icon?: string;
+	text?: string;
+	href?: string;
+	ariaLabel?: string;
+	icon?: string;
 }
 
 interface Action {
-  text?: string;
-  href?: string;
-  ariaLabel?: string;
+	text?: string;
+	href?: string;
+	ariaLabel?: string;
 }
 
 export interface Props {
-  title?: string;
-  links?: Array<Link>;
-  actions?: Array<Action>;
+	title?: string;
+	links?: Array<Link>;
+	actions?: Array<Action>;
 }
 
 const { title = SITE.name, links = [], actions = [] } = Astro.props;

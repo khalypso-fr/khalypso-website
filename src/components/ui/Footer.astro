@@ -3,33 +3,30 @@ import { Icon } from "astro-icon/components";
 import ToggleMode from "./ToggleMode.astro";
 
 interface Link {
-  text?: string;
-  href?: string;
-  ariaLabel?: string;
-  icon?: string;
+	text?: string;
+	href?: string;
+	ariaLabel?: string;
+	icon?: string;
 }
 
 interface Links {
-  title?: string;
-  links: Array<Link>;
+	title?: string;
+	links: Array<Link>;
 }
 
 export interface Props {
-  links: Array<Links>;
-  socialLinks: Array<Link>;
+	links: Array<Links>;
+	socialLinks: Array<Link>;
 }
 
 const { links = [], socialLinks = [] } = Astro.props;
 ---
 
 <footer class="footer sm:footer-horizontal bg-base-300 text-base-content p-10">
-  <aside>
-    <ToggleMode />
-  </aside>
   {
     links.map(({ title, links }) => (
       <nav>
-        <h6 class="footer-title">{title}</h6>
+        <span class="footer-title">{title}</span>
         {links.map((link) => (
           <a
             class="link link-hover"
@@ -45,7 +42,7 @@ const { links = [], socialLinks = [] } = Astro.props;
   {
     socialLinks.length > 0 && (
       <nav>
-        <h6 class="footer-title">Réseaux sociaux</h6>
+        <span class="footer-title">Réseaux sociaux</span>
         <div class="grid grid-flow-col gap-4">
           {socialLinks.map(({ href, ariaLabel, icon }) => (
             <a href={href} aria-label={ariaLabel} class="btn btn-ghost">
@@ -56,4 +53,7 @@ const { links = [], socialLinks = [] } = Astro.props;
       </nav>
     )
   }
+    <aside>
+      <ToggleMode />
+    </aside>
 </footer>

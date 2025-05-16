@@ -2,15 +2,15 @@
 import PageLayout from "~/layouts/PageLayout.astro";
 
 export interface Props {
-  frontmatter: {
-    title?: string;
-  };
+	frontmatter: {
+		title?: string;
+	};
 }
 
 const { frontmatter } = Astro.props;
 
 const metadata = {
-  title: frontmatter?.title,
+	title: frontmatter?.title,
 };
 ---
 

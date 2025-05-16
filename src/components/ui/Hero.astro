@@ -1,21 +1,21 @@
 ---
-import type { Props as PictureProps } from "astro/components/Picture.astro";
 import { Picture } from "astro:assets";
+import type { Props as PictureProps } from "astro/components/Picture.astro";
 
 interface Props {
-  tagline?: string;
-  title?: string;
-  subtitle?: string;
-  content?: string;
-  image?: PictureProps;
+	tagline?: string;
+	title?: string;
+	subtitle?: string;
+	content?: string;
+	image?: PictureProps;
 }
 
 const {
-  tagline = await Astro.slots.render("tagline"),
-  title = await Astro.slots.render("title"),
-  subtitle = await Astro.slots.render("subtitle"),
-  content = await Astro.slots.render("content"),
-  image,
+	tagline = await Astro.slots.render("tagline"),
+	title = await Astro.slots.render("title"),
+	subtitle = await Astro.slots.render("subtitle"),
+	content = await Astro.slots.render("content"),
+	image,
 } = Astro.props;
 ---
 

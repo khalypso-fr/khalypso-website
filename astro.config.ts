@@ -1,10 +1,10 @@
-import { defineConfig, sharpImageService } from "astro/config";
+import path from "node:path";
+import { fileURLToPath } from "node:url";
 import mdx from "@astrojs/mdx";
 import sitemap from "@astrojs/sitemap";
 import tailwindcss from "@tailwindcss/vite";
 import icon from "astro-icon";
-import path from "node:path";
-import { fileURLToPath } from "node:url";
+import { defineConfig, sharpImageService } from "astro/config";
 
 import partytown from "@astrojs/partytown";
 

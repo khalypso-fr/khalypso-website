@@ -13,7 +13,7 @@ import compress from "astro-compress";
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
 export default defineConfig({
-	site: "https://khalypso.fr",
+	site: "https://www.khalypso.fr",
 	output: "static",
 	integrations: [
 		sitemap(),
